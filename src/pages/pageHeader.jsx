@@ -1,6 +1,6 @@
 import React from 'react';
-import MainBanner from './components/MainBanner';
-import Navigation from './components/Navigation';
+import MainBanner from '../components/pageHeaderComponents/MainBanner';
+import Navigation from '../components/pageHeaderComponents/Navigation';
 
 const PageHeader = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import pageHeader from './pages/pageHeader';
-import pageBody from './pages/pageBody';
-import pageFooter from './pages/pageFooter';
+import PageHeader from './pages/PageHeader';
+import PageBody from './pages/PageBody';
+import PageFooter from './pages/PageFooter';
 
 function App() {
   return (
@@ -10,13 +10,13 @@ function App() {
       <div id="canvas-wrapper">
         <div id="canvas">
           <div id="page-header-wrapper">
-            <pageHeader></pageHeader>
+            <PageHeader />
           </div>
           <div id="page-body-wrapper">
-            <pageBody></pageBody>
+            <PageBody />
           </div>
           <div id="page-footer-wrapper">
-            <pageFooter></pageFooter>
+            <PageFooter />
           </div>
         </div>
       </div>
