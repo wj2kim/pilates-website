@@ -2,24 +2,20 @@ import React from 'react';
 
 const Navigation = () => {
   return (
-    <div>
-      <nav
-        id="main-navigation"
-        class="main-nav"
-        style={{ borderBottom: '1px solid #cfcfcf' }}
-      >
+    <div id="sticky-top-menu">
+      <a href="/">
+        <svg></svg>
+      </a>
+      <nav id="main-navigation" class="main-nav">
         <ul>
           <li class="page-collection active-link">
-            <a href="/">Welcome</a>
+            <a href="/">Home</a>
           </li>
           <li class="page-collection">
-            <a href="/balletfitPilatesInfo">Balletfit &amp; Pilates ?</a>
+            <a href="/about">About</a>
           </li>
           <li class="page-collection">
-            <a href="/studio">Studio</a>
-          </li>
-          <li class="page-collection">
-            <a href="/faq">faq</a>
+            <a href="/portfolio">Portfolio</a>
           </li>
           <li class="page-collection">
             <a href="/blog">Blog</a>

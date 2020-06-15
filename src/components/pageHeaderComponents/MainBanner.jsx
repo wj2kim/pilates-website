@@ -3,7 +3,26 @@ import React from 'react';
 const MainBanner = () => {
   return (
     <div id="banner-wrapper">
-      <a href="/" rel="">
+      <div id="banner-row" class="row">
+        <div class="col-6 align-self-center">
+          <div id="self-introduction">
+            <p>
+              Hello, I am a Front-End Developer
+              <br />
+              in S.Korea. Specialized in HTML/CSS/Javascipt and React. Enjoy my
+              portfolio !
+            </p>
+          </div>
+        </div>
+        <div id="self-name">
+          {/* <svg></svg> */}
+          <p>Paul Woo Jung Kim</p>
+        </div>
+        <div class="col-6 text-right text-xl-center face">
+          {/* <svg></svg> */}
+        </div>
+      </div>
+      {/* <a href="/" rel="">
         <img
           id="banner"
           src=""
@@ -13,7 +32,7 @@ const MainBanner = () => {
           Classical Ballet &amp; Pilates Studio In Songdo, Incheon, Korea. EST.
           2019
         </p>
-      </a>
+      </a> */}
     </div>
   );
 };

@@ -1,43 +1,27 @@
 import React from 'react';
-import ContentIntroHeader from '../components/pageBodyComponents/ContentIntroHeader';
-import ContentIntroBody from '../components/pageBodyComponents/ContentIntroBody';
-import CarouselThumbnailsGallary from '../components/pageBodyComponents/CarouselThumbnailsGallary';
-import ContentBodyHeader from '../components/pageBodyComponents/ContentMainHeader';
-import ContentMainFirst from '../components/pageBodyComponents/ContentMainFirst';
-import ContentMainSecond from '../components/pageBodyComponents/ContentMainSecond';
-import ContentMainThird from '../components/pageBodyComponents/ContentMainThird';
+import About from '../components/pageBodyComponents/About';
+import Portfolio from '../components/pageBodyComponents/Portfolio';
+import Blog from '../components/pageBodyComponents/Blog';
+import Contact from '../components/pageBodyComponents/Contact';
 
 const PageBody = () => {
-  const contentDelimeter = <hr />;
+  // const contentDelimeter = <hr />;
 
   return (
     <div id="page-body">
       <div id="content-wrapper">
         <div id="content">
-          <div id="content-intro-header-wrapper">
-            <ContentIntroHeader />
+          <div id="content-about-wrapper">
+            <About />
           </div>
-          <div class="content-delimeter">{contentDelimeter}</div>
-          <div id="content-intro-body-wrapper">
-            <ContentIntroBody />
+          <div id="content-portfolio-wrapper">
+            <Portfolio />
           </div>
-          <div id="content-intro-footer-wrapper">
-            <CarouselThumbnailsGallary />
+          <div id="content-blog-wrapper">
+            <Blog />
           </div>
-          <div id="content-main-header-wrapper">
-            <ContentBodyHeader />
-          </div>
-          <div class="content-delimeter">{contentDelimeter}</div>
-          <div id="content-main-first-wrapper">
-            <ContentMainFirst />
-          </div>
-          <div class="content-delimeter">{contentDelimeter}</div>
-          <div id="content-main-second-wrapper">
-            <ContentMainSecond />
-          </div>
-          <div class="content-delimeter">{contentDelimeter}</div>
-          <div id="content-main-third-wrapper">
-            <ContentMainThird />
+          <div id="content-contact-wrapper">
+            <Contact />
           </div>
         </div>
       </div>
