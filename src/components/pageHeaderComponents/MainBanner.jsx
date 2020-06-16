@@ -1,39 +1,47 @@
 import React from 'react';
+import './MainBanner.scss';
 
 const MainBanner = () => {
   return (
-    <div id="banner-wrapper">
-      <div id="banner-row" class="row">
+    <div class="container-fluid main-banner">
+      <div class="row">
         <div class="col-6 align-self-center">
-          <div id="self-introduction">
+          <div class="whoami">
             <p>
-              Hello, I am a Front-End Developer
-              <br />
-              in S.Korea. Specialized in HTML/CSS/Javascipt and React. Enjoy my
-              portfolio !
+              Hello, I am a Front-End Developer in S.Korea. Specialized in
+              HTML/CSS/Javascipt and React. Enjoy my Portfolio !
             </p>
           </div>
+          <div class="name">Paul Woo Jung Kim</div>
         </div>
-        <div id="self-name">
-          {/* <svg></svg> */}
-          <p>Paul Woo Jung Kim</p>
-        </div>
-        <div class="col-6 text-right text-xl-center face">
-          {/* <svg></svg> */}
-        </div>
+        <div class="col-6 text-right text-xl-center"></div>
       </div>
-      {/* <a href="/" rel="">
-        <img
-          id="banner"
-          src=""
-          alt="The Move On Balletpit &amp; Pilates Studio"
-        />
-        <p id="logo-tagline" class="logo-subtile">
-          Classical Ballet &amp; Pilates Studio In Songdo, Incheon, Korea. EST.
-          2019
-        </p>
-      </a> */}
     </div>
+
+    // <div
+    //   id="main-banner"
+    //   class="main-banner d-flex align-items-center container"
+    // >
+    //   <div id="banner-wrapper">
+    //     <div id="banner-row" class="row">
+    //       <div class="col s6 align-self-center">
+    //         <div id="self-introduction">
+    //           Hello, I am a Front-End Developer in S.Korea.
+    //           <br />
+    //           Specialized in HTML/CSS/Javascipt and React.
+    //           <br />
+    //           Enjoy my Portfolio !
+    //         </div>
+    //         <div id="self-name">
+    //           <p>Paul Woo Jung Kim</p>
+    //         </div>
+    //       </div>
+    //       <div class="col s6 text-right text-xl-center">
+    //         {/* <svg></svg> */}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 

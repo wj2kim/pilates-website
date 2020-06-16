@@ -3,11 +3,11 @@ import Navigation from './pages/Navigation';
 import PageHeader from './pages/PageHeader';
 import PageBody from './pages/PageBody';
 import PageFooter from './pages/PageFooter';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <nav id="mobile-navigation"></nav>
       <div id="canvas-wrapper">
         <div id="canvas">
           <div id="navigation-wrapper">
@@ -24,7 +24,6 @@ function App() {
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
