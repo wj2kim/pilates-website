@@ -1,7 +1,7 @@
 import React from 'react';
 import About from '../components/pageBodyComponents/About';
-import Portfolio from '../components/pageBodyComponents/Portfolio';
-import Blog from '../components/pageBodyComponents/Blog';
+import Projects from '../components/pageBodyComponents/Projects';
+import Blogs from '../components/pageBodyComponents/Blogs';
 import Contact from '../components/pageBodyComponents/Contact';
 
 const PageBody = () => {
@@ -15,10 +15,10 @@ const PageBody = () => {
             <About />
           </div>
           <div id="content-portfolio-wrapper">
-            <Portfolio />
+            <Projects />
           </div>
           <div id="content-blog-wrapper">
-            <Blog />
+            <Blogs />
           </div>
           <div id="content-contact-wrapper">
             <Contact />
