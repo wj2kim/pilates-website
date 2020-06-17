@@ -2,12 +2,12 @@ import React from 'react';
 
 const SocialIcons = () => {
   return (
-    <div id="social-icons">
+    <section id="social-icons">
       {/* <a href=""></a>
       <a href=""></a>
       <a href=""></a>
       <a href=""></a> */}
-    </div>
+    </section>
   );
 };
 

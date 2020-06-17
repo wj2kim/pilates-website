@@ -3,14 +3,19 @@ import SocialIcons from '../components/pageFooterComponents/SocialIcons';
 
 const PageFooter = () => {
   return (
-    <div id="page-footer" style={{ borderTop: '1px solid #cfcfcf' }}>
-      <div id="footer-row" class="row">
-        <div id="footer-textarea">
-          <p>Footer Explaination</p>
+    <div
+      id="page-footer"
+      class="container-fluid"
+      style={{ borderTop: '1px solid #cfcfcf' }}
+    >
+      <div id="copyright-wrapper">
+        <div id="copyright">
+          <i class="material-icons">copyright</i>
+          Paul Woo Jung Kim 2020. All rights reserved.
         </div>
-        <div id="social-icons-wrapper">
-          <SocialIcons />
-        </div>
+      </div>
+      <div id="social-icons-wrapper">
+        <SocialIcons />
       </div>
     </div>
   );

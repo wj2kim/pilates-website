@@ -15,6 +15,10 @@ const Contact = () => {
 
   // to check if form has succesfully submitted
   const [submitted, setSubmitted] = useState(false);
+  const [submitResult, setSubmitResult] = useState({
+    success: false,
+    message: '',
+  });
 
   const onNameChange = useCallback((e) => {
     setName(e.target.value);
@@ -55,6 +59,7 @@ const Contact = () => {
 
   const setEmailBeforeSending = (e) => {
     e.preventDefault();
+    debugger;
 
     const nameValidationError = validateName(name);
     const emailAddressValidationError = validateEmail(email);
@@ -65,23 +70,33 @@ const Contact = () => {
       emailAddressValidationError === '' &&
       messageValidationError === ''
     ) {
-      const result = {
+      const request = {
         name: name,
         email: email,
         message: message,
       };
-      sendEmail(result);
-      setSubmitted(true); // maybe move into submitEmail function
+      sendEmail(request);
+      setSubmitted(true);
     }
   };
 
-  const sendEmail = (result) => {
-    emailjs.sendForm(serviceId, templateId, result, userId).then(
-      (result) => {
-        console.log(result.text);
+  const sendEmail = (request) => {
+    emailjs.send(serviceId, templateId, request, userId).then(
+      (response) => {
+        setSubmitResult({
+          ...submitResult,
+          success: true,
+          message: 'Thank you, Your message was successfully delivered',
+        });
+        setName('');
+        setEmail('');
+        setMessage('');
       },
       (error) => {
-        console.log(error.text);
+        setSubmitResult({
+          ...submitResult,
+          message: 'Network is unstable. Please try again later',
+        });
       },
     );
   };
@@ -106,6 +121,7 @@ const Contact = () => {
                   type="text"
                   class="validate"
                   value={name}
+                  maxLength="30"
                   onChange={onNameChange}
                 />
                 <label for="icon_prefix">Name</label>
@@ -120,6 +136,7 @@ const Contact = () => {
                   type="text"
                   class="validate"
                   value={email}
+                  maxLength="40"
                   onChange={onEmailChange}
                 />
                 <label for="icon_prefix">Email</label>
@@ -133,6 +150,7 @@ const Contact = () => {
                   id="textarea1"
                   class="materialize-textarea"
                   value={message}
+                  maxLength="300"
                   onChange={onMessageChange}
                 ></textarea>
                 <label for="textarea1">Message</label>
@@ -143,7 +161,7 @@ const Contact = () => {
               class="btn waves-effect waves-light"
               type="submit"
               name="action"
-              disabled={submitted}
+              disabled={submitted && submitResult.success}
             >
               Send
               <i class="material-icons right">send</i>
@@ -151,9 +169,11 @@ const Contact = () => {
             {submitted && (
               <div className="row">
                 <span
-                  className={submitted ? 'submit-success' : 'submit-failure'}
+                  className={
+                    submitResult.success ? 'submit-success' : 'submit-failure'
+                  }
                 >
-                  {submitted}
+                  {submitResult.message}
                 </span>
               </div>
             )}

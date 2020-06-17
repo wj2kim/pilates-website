@@ -3,7 +3,7 @@ import './MainBanner.scss';
 
 const MainBanner = () => {
   return (
-    <div class="container-fluid main-banner">
+    <section class="container-fluid main-banner">
       <div class="row">
         <div class="col-6 align-self-center">
           <div class="whoami">
@@ -16,7 +16,7 @@ const MainBanner = () => {
         </div>
         <div class="col-6 text-right text-xl-center"></div>
       </div>
-    </div>
+    </section>
 
     // <div
     //   id="main-banner"
