@@ -1,0 +1,59 @@
+#content-contact {
+  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  letter-spacing: 0.15em;
+  margin-bottom: 6rem;
+  #content-contact-title {
+    padding: 10px;
+  }
+  #content-contact-body {
+    margin-top: 25px;
+    .error {
+      font-size: smaller;
+      letter-spacing: 0.05em;
+      font-weight: lighter;
+      color: #e53935;
+    }
+  }
+  #button-area {
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #content-contact-body {
+    width: 80%;
+  }
+  #input-name {
+    width: 30%;
+  }
+  #input-email {
+    width: 40%;
+  }
+  #input-message {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #input-name {
+    width: 50%;
+  }
+  #input-email {
+    width: 60%;
+  }
+  #input-message {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #input-name {
+    width: 60%;
+  }
+  #input-email {
+    width: 70%;
+  }
+  #input-message {
+    width: 80%;
+  }
+}

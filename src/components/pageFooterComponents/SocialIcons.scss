@@ -14,7 +14,9 @@
 
 #social-icons {
   margin: 0;
-  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  font-size: smaller;
+  font-weight: lighter;
+  //   font: bold 14px/1.4 'Open Sans', arial, sans-serif;
   display: flex;
   justify-content: flex-end;
 
@@ -30,15 +32,13 @@
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.15em;
-
-    display: inline-block;
     padding: 15px 20px;
     position: relative;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   a:hover {
     opacity: 1;
+    color: #ee0979;
   }
   a:after {
     background: none repeat scroll 0 0 transparent;
@@ -59,6 +59,54 @@
   @media screen and (max-height: 300px) {
     ul {
       margin-top: 40px;
+    }
+  }
+  @media screen and (max-width: 799px) {
+    li {
+      margin-left: -30px;
+    }
+  }
+  @media screen and (max-width: 679px) {
+    li {
+      margin-left: -40px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    li {
+      margin-left: 0px;
+    }
+  }
+  @media screen and (max-width: 428px) {
+    li {
+      margin-right: -5px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    li {
+      margin-left: 0px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #copyright {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  #social-icons {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  #social-icons {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #social-icons {
+    ul {
+      width: min-content;
+      justify-content: center;
     }
   }
 }

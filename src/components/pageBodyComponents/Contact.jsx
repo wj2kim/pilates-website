@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import emailjs from 'emailjs-com';
+import './Contact.scss';
 
 const Contact = () => {
   const serviceId = 'gmail';
@@ -36,7 +37,7 @@ const Contact = () => {
   }, []);
 
   const validateName = (value) => {
-    const error = value ? '' : 'You must enter your first name';
+    const error = value ? '' : 'You must enter your name';
     setNameError(error);
     return error;
   };
@@ -52,14 +53,13 @@ const Contact = () => {
   };
 
   const validateMessage = (value) => {
-    const error = value ? '' : 'You must enter your first name';
+    const error = value ? '' : 'You must enter any message';
     setMessageError(error);
     return error;
   };
 
   const setEmailBeforeSending = (e) => {
     e.preventDefault();
-    debugger;
 
     const nameValidationError = validateName(name);
     const emailAddressValidationError = validateEmail(email);
@@ -103,10 +103,10 @@ const Contact = () => {
 
   return (
     <section id="content-contact" className="container-fluid">
-      <div id="content-contact-title">
-        <h4>Contact</h4>
+      <div id="content-contact-title" style={{ fontSize: 'x-large' }}>
+        CONTACT
       </div>
-      <div id="content-contact-body" className="container">
+      <div id="content-contact-body" className="container-fluid">
         <div class="row">
           <form
             noValidate={true}
@@ -114,10 +114,10 @@ const Contact = () => {
             onSubmit={setEmailBeforeSending}
           >
             <div className="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
                 <input
-                  id="icon_prefix"
+                  id="input-name"
                   type="text"
                   class="validate"
                   value={name}
@@ -129,10 +129,10 @@ const Contact = () => {
               </div>
             </div>
             <div className="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
                 <input
-                  id="icon_prefix"
+                  id="input-email"
                   type="text"
                   class="validate"
                   value={email}
@@ -147,7 +147,7 @@ const Contact = () => {
               <div class="input-field col s12">
                 <i class="material-icons prefix">mode_edit</i>
                 <textarea
-                  id="textarea1"
+                  id="input-message"
                   class="materialize-textarea"
                   value={message}
                   maxLength="300"
@@ -157,26 +157,29 @@ const Contact = () => {
                 <span className="error">{messageError}</span>
               </div>
             </div>
-            <button
-              class="btn waves-effect waves-light"
-              type="submit"
-              name="action"
-              disabled={submitted && submitResult.success}
-            >
-              Send
-              <i class="material-icons right">send</i>
-            </button>
-            {submitted && (
-              <div className="row">
-                <span
-                  className={
-                    submitResult.success ? 'submit-success' : 'submit-failure'
-                  }
-                >
-                  {submitResult.message}
-                </span>
-              </div>
-            )}
+            <div id="button-area">
+              <button
+                class="btn waves-effect waves-light"
+                type="submit"
+                name="action"
+                disabled={submitted && submitResult.success}
+              >
+                Send
+                <i class="material-icons right">send</i>
+              </button>
+
+              {submitted && (
+                <div className="row">
+                  <span
+                    className={
+                      submitResult.success ? 'submit-success' : 'submit-failure'
+                    }
+                  >
+                    {submitResult.message}
+                  </span>
+                </div>
+              )}
+            </div>
           </form>
         </div>
       </div>

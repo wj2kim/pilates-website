@@ -12,24 +12,24 @@ import './SocialIcons.scss';
 
 const SocialIcons = () => {
   return (
-    <div id="social-icons" class="social-icons nav-wrapper">
-      <ul>
+    <div id="social-icons" className="social-icons nav-wrapper">
+      <ul className="row">
         <a
           title="Instagram"
           target="_blank"
           href="https://www.instagram.com/pvvjk/"
         >
-          <li class="social-name">INSTAGRAM</li>
+          <li className="social-name col s6 m4">INSTAGRAM</li>
         </a>
         <a title="Github" target="_blank" href="https://github.com/wj2kim">
-          <li class="social-name">GITHUB</li>
+          <li className="social-name col s6 m4">GITHUB</li>
         </a>
         <a
           title="Tistory"
           target="_blank"
           href="https://dont-stay-hungry.tistory.com"
         >
-          <li class="social-name">TISTORY</li>
+          <li className="social-name cols s6 m4">TISTORY</li>
         </a>
       </ul>
     </div>
