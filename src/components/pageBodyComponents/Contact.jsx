@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   const validateMessage = (value) => {
-    const error = value ? '' : 'You must enter any message';
+    const error = value ? '' : 'You must enter a message';
     setMessageError(error);
     return error;
   };
@@ -86,11 +86,8 @@ const Contact = () => {
         setSubmitResult({
           ...submitResult,
           success: true,
-          message: 'Thank you, Your message was successfully delivered',
+          message: 'Thank you! Your message was successfully delivered',
         });
-        setName('');
-        setEmail('');
-        setMessage('');
       },
       (error) => {
         setSubmitResult({
@@ -103,69 +100,73 @@ const Contact = () => {
 
   return (
     <section id="content-contact" className="container-fluid">
-      <div id="content-contact-title" style={{ fontSize: 'x-large' }}>
-        CONTACT
+      <div id="content-contact-title" style={{ fontSize: 'large' }}>
+        <a className="link-2">CONTACT</a>
+      </div>
+      <div id="content-contact-subtitle">
+        If you want to work together, dont hesitate to contact me!
       </div>
       <div id="content-contact-body" className="container-fluid">
-        <div class="row">
+        <div className="row">
           <form
             noValidate={true}
-            class="col s12 contact-form"
+            className="col s12 contact-form"
             onSubmit={setEmailBeforeSending}
           >
             <div className="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
+              <div className="input-field col s12">
+                <i className="material-icons prefix">account_circle</i>
                 <input
                   id="input-name"
                   type="text"
-                  class="validate"
+                  className="validate"
                   value={name}
                   maxLength="30"
                   onChange={onNameChange}
                 />
-                <label for="icon_prefix">Name</label>
+                <label for="input-name">Name</label>
                 <span className="error">{nameError}</span>
               </div>
             </div>
             <div className="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">email</i>
+              <div className="input-field col s12">
+                <i className="material-icons prefix">email</i>
                 <input
                   id="input-email"
-                  type="text"
-                  class="validate"
+                  type="email"
+                  className="validate"
                   value={email}
                   maxLength="40"
                   onChange={onEmailChange}
                 />
-                <label for="icon_prefix">Email</label>
+                <label for="input-email">Email</label>
                 <span className="error">{emailAddressError}</span>
               </div>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">mode_edit</i>
-                <textarea
+            <div className="row">
+              <div className="input-field col s12">
+                <i className="material-icons prefix">mode_edit</i>
+                <input
                   id="input-message"
-                  class="materialize-textarea"
+                  type="text"
+                  className="validate"
                   value={message}
                   maxLength="300"
                   onChange={onMessageChange}
-                ></textarea>
-                <label for="textarea1">Message</label>
+                />
+                <label for="input-message">Message</label>
                 <span className="error">{messageError}</span>
               </div>
             </div>
             <div id="button-area">
               <button
-                class="btn waves-effect waves-light"
+                className="btn waves-effect waves-light"
                 type="submit"
                 name="action"
                 disabled={submitted && submitResult.success}
               >
                 Send
-                <i class="material-icons right">send</i>
+                <i className="material-icons right">send</i>
               </button>
 
               {submitted && (
