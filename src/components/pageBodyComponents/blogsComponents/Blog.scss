@@ -1,4 +1,5 @@
 .single-post {
+  margin: 2rem 0 2rem 0;
   .card {
     box-shadow: none;
     // padding: 0 5rem;
@@ -28,11 +29,42 @@
     .card-link {
       text-decoration: none;
       color: inherit;
+      font-size: smaller;
+      font-weight: 500;
+      opacity: 0.8;
+      margin-top: 1.6rem;
     }
   }
 }
 
-$underlineColor: linear-gradient(5deg, #09d4b2 0, #0bd4a2);
+@media screen and (max-width: 768px) {
+  .card-title {
+    height: 5rem;
+  }
+  .card-date {
+    margin-top: 2rem;
+  }
+  .card-body {
+    max-height: 7.5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card-title {
+    max-height: 4rem;
+  }
+  .card-date {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card-title {
+    max-height: 5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+}
+
+$underlineColor: linear-gradient(5deg, #09d4b2 0, #0bd498);
 $underlineHeight: 8%;
 
 .underline-effect-2 {
@@ -64,4 +96,50 @@ $underlineHeight: 8%;
     bottom: 0;
     transition: all ease 0.6s;
   }
+}
+
+.cta {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  margin: auto;
+  padding: 15px 10px;
+  transition: all 0.2s ease;
+}
+.cta:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: $underlineColor;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: $underlineColor;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
 }

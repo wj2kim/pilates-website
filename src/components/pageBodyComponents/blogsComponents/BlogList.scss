@@ -1,0 +1,11 @@
+@media screen and (min-width: 426px) {
+  .blog-list {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .blog-list {
+    padding: 0rem;
+  }
+}

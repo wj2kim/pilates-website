@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Blog from './Blog';
 import data from '../../../data/posts.json';
+import './BlogList.scss';
 
 /* 
 due to tistory blog open api needs steady renewal
@@ -49,7 +50,7 @@ const BlogList = () => {
   }
 
   return (
-    <div className="blog-list row" style={{ padding: '1.5rem' }}>
+    <div className="blog-list row">
       {posts.map((post) => (
         <Blog key={post.id} post={post} />
       ))}
