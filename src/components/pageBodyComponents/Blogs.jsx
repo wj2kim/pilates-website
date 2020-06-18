@@ -1,11 +1,12 @@
 import React from 'react';
 import BlogList from './blogsComponents/BlogList';
+import './Blogs.scss';
 
 const Blogs = () => {
   return (
     <section id="content-blog" className="container-fluid">
       <div id="content-blog-title">
-        <h4>Blog</h4>
+        <a className="link-2">BLOG</a>
       </div>
       <div id="content-blog-body" className="container">
         <BlogList />

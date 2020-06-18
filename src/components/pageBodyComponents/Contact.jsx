@@ -100,11 +100,11 @@ const Contact = () => {
 
   return (
     <section id="content-contact" className="container-fluid">
-      <div id="content-contact-title" style={{ fontSize: 'large' }}>
+      <div id="content-contact-title">
         <a className="link-2">CONTACT</a>
       </div>
       <div id="content-contact-subtitle">
-        If you want to work together, dont hesitate to contact me!
+        If you want to work together, don't hesitate to contact me!
       </div>
       <div id="content-contact-body" className="container-fluid">
         <div className="row">

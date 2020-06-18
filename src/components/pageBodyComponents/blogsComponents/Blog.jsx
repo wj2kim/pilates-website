@@ -1,28 +1,27 @@
 import React from 'react';
 import './Blog.scss';
 
-const Blog = () => {
+const Blog = ({ post }) => {
+  const { title, url, imageUrl, preview, date } = post;
   return (
-    <div id="blog" class="col s12 m6">
+    <div class="single-post col s12 m6">
       <div class="card">
         <div class="card-image">
-          <img src="images/test3.jpg" alt="" />
+          <img src={imageUrl} alt={title + 'image'} />
         </div>
-        <div className="card-title">
-          <h4>This is title</h4>
-        </div>
+        <div className="card-title">{title}</div>
         <div className="card-date">
-          <p>June 26, 2020</p>
+          <a className="underline-effect-2">{date}</a>
         </div>
-        <div class="card-body" style={{ borderTop: '1px solid #cfcfcf' }}>
-          <p>
-            I am a very simple card. I am good at containing small bits of
-            information. I am convenient because I require little markup to use
-            effectively.
-          </p>
-        </div>
+        <div class="card-body">{preview}...</div>
         <div class="card-link">
-          <a href="#">This is a link</a>
+          <a href="#" id="takeALook">
+            <span>Take a look</span>
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

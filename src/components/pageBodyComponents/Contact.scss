@@ -4,10 +4,12 @@
   margin-bottom: 6rem;
   #content-contact-title {
     padding: 10px;
+    font-size: large;
   }
   #content-contact-subtitle {
     padding-top: 2rem;
     margin-left: 1.5rem;
+    font-size: larger;
   }
   #content-contact-body {
     margin-top: 4rem;
@@ -106,51 +108,4 @@
   //   form .error {
   //     display: flex;
   //   }
-}
-
-$underlineColor: linear-gradient(2deg, #ee0979 0, #ff6a00);
-$underlineHeight: 4%;
-
-.link-2 {
-  position: relative;
-  text-decoration: none;
-  display: inline-block;
-  color: black;
-  padding: 10px;
-  transition: color ease 0.3s;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    background-image: $underlineColor;
-    z-index: -1;
-    height: $underlineHeight;
-  }
-
-  &::before {
-    width: 0%;
-    left: 0;
-    bottom: 0;
-    transition: width ease 0.4s;
-  }
-
-  &::after {
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    transition: all ease 0.6s;
-  }
-
-  &:hover {
-    &::before {
-      width: 100%;
-    }
-
-    &::after {
-      left: 100%;
-      width: 0%;
-      transition: all ease 0.2s;
-    }
-  }
 }

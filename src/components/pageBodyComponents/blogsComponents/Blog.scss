@@ -1,7 +1,67 @@
-#blog {
+.single-post {
   .card {
     box-shadow: none;
     // padding: 0 5rem;
     // height: 15rem;
+    .card-image {
+      height: 12rem;
+    }
+    .card-title {
+      height: 4.5rem;
+      font-size: 1.3rem;
+      font-weight: bolder;
+      opacity: 0.6;
+      padding: 10px 0;
+    }
+    .card-date {
+      font-size: smaller;
+      font-weight: 300;
+      font-stretch: extra-expanded;
+      letter-spacing: 0.25em;
+    }
+    .card-body {
+      margin-top: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      opacity: 0.8;
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+$underlineColor: linear-gradient(5deg, #09d4b2 0, #0bd4a2);
+$underlineHeight: 8%;
+
+.underline-effect-2 {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  padding: 10px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: $underlineColor;
+    z-index: 2;
+    height: $underlineHeight;
+  }
+
+  &::before {
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: width ease 0.4s;
+  }
+
+  &::after {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: all ease 0.6s;
   }
 }
