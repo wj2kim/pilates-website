@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Work from './Work';
 import M from 'materialize-css';
 import './Modal.scss';
@@ -10,36 +10,27 @@ const WorkList = () => {
   const [detail, setDetail] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [isEventSet, setIsEventSet] = useState(false);
+  const [modalInstance, setModalInstance] = useState(null);
   const [sliderInstance, setSliderInstance] = useState(null);
   const modalEl = useRef();
   const sliderEl = useRef();
-
-  const sliderOptions = {
-    indicators: false,
-    interval: 6000,
-  };
+  // let sliderInstance = null;
 
   useEffect(() => {
     setLoading(true);
-    // console.log(modalEl);
-    // console.log(sliderEl);
+    // let sliderElems = document.querySelector('#pk-slider');
+    // console.log(sliderElems);
+    // sliderInstance = M.Slider.init(sliderElems, sliderOptions);
+    // console.log('is here');
     setProjects(data);
     setLoading(false);
   }, []);
 
-  // useEffect(() => {
-  //   if (modalEl.current) {
-  //     preventMomentumScroll(modalEl.current);
-  //   }
-  //   if (sliderEl.curret) {
-  //     setSliderInstance(M.Slider.getInstance(sliderEl.current, sliderOptions));
-  //   }
-  // });
-
-  document.addEventListener('DOMContentLoaded', function () {
-    let elems = document.querySelector('.slider');
-    setSliderInstance(M.Slider.init(elems, sliderOptions));
-  });
+  useEffect(() => {
+    if (modalEl.current) {
+      preventMomentumScroll(modalEl.current);
+    }
+  }, [modalEl.current]);
 
   useEffect(() => {
     const target = modalEl.current;
@@ -84,6 +75,28 @@ const WorkList = () => {
     }
     return false;
   }
+  const initiateModal = () => {
+    const modalOptions = {};
+    console.log(document.querySelector('.modal'));
+    const test1 = document.querySelector('.modal');
+    const testInstance = M.Modal.init(test1, { dismissible: false });
+    console.log(testInstance);
+    testInstance.open();
+    // console.log(
+    //   M.Modal.init(document.querySelectorAll('.modal'), modalOptions),
+    // );
+    // let modalIns = M.Modal.init(modalEl.current, modalOptions);
+    // console.log(modalIns);
+    // console.log(modalEl.modal('open'));
+  };
+
+  const initiateSlider = () => {
+    const sliderOptions = {
+      indicators: false,
+      interval: 6000,
+    };
+    setSliderInstance(M.Slider.init(sliderEl.current, sliderOptions));
+  };
 
   const movePrevSlide = (e) => {
     e.preventDefault();
@@ -98,16 +111,23 @@ const WorkList = () => {
   };
 
   const openModal = (project) => {
-    modalEl.current.classList.toggle('active');
-    modalEl.current.classList.remove('leave');
+    console.log(modalEl);
+    // modalEl.current.classList.toggle('active');
+    // modalEl.current.classList.remove('leave');
     setShowModal(true);
+    initiateModal();
+    initiateSlider();
+    // modalInstance.open();
     setDetail(project);
   };
 
   const closeModal = (e) => {
-    modalEl.current.classList.remove('active');
-    modalEl.current.classList.add('leave');
+    // modalEl.current.classList.remove('active');
+    // modalEl.current.classList.add('leave');
+    modalInstance.close();
     setShowModal(false);
+    setModalInstance(null);
+    setSliderInstance(null);
     setDetail(null);
   };
 
@@ -151,7 +171,19 @@ const WorkList = () => {
         ))}
       </div>
 
-      <div
+      <div ref={modalEl} id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+            Agree
+          </a>
+        </div>
+      </div>
+
+      {/* <div
         ref={modalEl}
         onScroll={(e) => preventMomentumScroll(e.currentTarget)}
         onTouchMove={(e) => {
@@ -212,6 +244,7 @@ const WorkList = () => {
               <div className="pk-modal-content container-fluid">
                 <div className="work-title">{detail.title}</div>
                 <div className="work-subtitle">{detail.subtitle}</div>
+                <div className="divider"></div>
                 <div className="work-explanation">{detail.description}</div>
               </div>
             )}
@@ -236,7 +269,7 @@ const WorkList = () => {
           </div>
         </div>
         <div className="pk-modal-overlay" onClick={closeModal}></div>
-      </div>
+      </div> */}
     </div>
   );
 };
