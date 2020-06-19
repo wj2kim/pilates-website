@@ -36,8 +36,6 @@ const BlogList = () => {
     );
   }
 
-  console.log(posts);
-
   if (!posts) {
     return (
       <div class="container" style={{ textAlign: 'center', paddingTop: '18%' }}>

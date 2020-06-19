@@ -1,0 +1,80 @@
+.modal {
+  top: 15px !important;
+  width: 60vw !important;
+  max-height: 95vh !important;
+  height: 95vh !important;
+}
+
+.modal-content {
+  padding: 0 !important;
+
+  .slider {
+    height: 50%;
+    min-height: 50%;
+    max-height: 50%;
+  }
+}
+
+.material-icons {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.middle-indicator {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 3;
+  opacity: 0.4;
+}
+.middle-indicator-text {
+  font-size: 4.2rem;
+}
+a.middle-indicator-text {
+  color: white !important;
+}
+.content-indicator {
+  width: 64px;
+  height: 64px;
+  background: none;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.indicators {
+  visibility: hidden;
+}
+
+.modal-footer .container-fluid {
+  text-align: left;
+  .work-title {
+    font-size: 2.2rem;
+    margin-top: 12px;
+  }
+  .work-subtitle {
+    font-size: 1.5rem;
+    color: #777;
+  }
+  .work-explanation {
+    border-top: 1px solid #cfcfcf;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    padding-top: 12px;
+  }
+}
+
+.link-quit {
+  margin: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+}

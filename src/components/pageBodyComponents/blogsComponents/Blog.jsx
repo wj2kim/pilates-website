@@ -15,7 +15,7 @@ const Blog = ({ post }) => {
         </div>
         <div class="card-body">{preview}...</div>
         <div class="card-link">
-          <a href="#" className="cta">
+          <a href={url} target="_blank" className="cta">
             <span>Take a look</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
