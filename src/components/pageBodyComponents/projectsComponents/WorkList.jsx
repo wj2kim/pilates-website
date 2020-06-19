@@ -1,93 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Work from './Work';
 import M from 'materialize-css';
-import './Modal.scss';
+import './WorkList.scss';
 import data from '../../../data/projects.json';
 
 const WorkList = () => {
   const [projects, setProjects] = useState(null);
   const [loading, setLoading] = useState(false);
   const [detail, setDetail] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [isEventSet, setIsEventSet] = useState(false);
-  const [modalInstance, setModalInstance] = useState(null);
   const [sliderInstance, setSliderInstance] = useState(null);
-  const modalEl = useRef();
   const sliderEl = useRef();
-  // let sliderInstance = null;
+  let modalInstance = null;
 
   useEffect(() => {
     setLoading(true);
-    // let sliderElems = document.querySelector('#pk-slider');
-    // console.log(sliderElems);
-    // sliderInstance = M.Slider.init(sliderElems, sliderOptions);
-    // console.log('is here');
     setProjects(data);
     setLoading(false);
   }, []);
 
-  useEffect(() => {
-    if (modalEl.current) {
-      preventMomentumScroll(modalEl.current);
-    }
-  }, [modalEl.current]);
-
-  useEffect(() => {
-    const target = modalEl.current;
-    const events = ['scroll', 'touchmove', 'mousewheel'];
-    const eventFunction = (e) => {
-      if (!e) {
-        e = window.event;
-      }
-      if (e.preventDefault) {
-        e.preventDefault();
-      }
-    };
-    if (showModal && !isEventSet) {
-      const addMultipleEventListener = (target, events, eventFunction) => {
-        events.forEach((event) =>
-          target.addEventListener(event, eventFunction),
-        );
-      };
-      addMultipleEventListener(target, events, eventFunction);
-      setIsEventSet(true);
-    }
-    if (!showModal && isEventSet) {
-      const removeMultipleEventListener = (target, events, eventFunction) => {
-        events.forEach((event) =>
-          target.removeEventListener(event, eventFunction),
-        );
-      };
-      removeMultipleEventListener(target, events, eventFunction);
-      setIsEventSet(false);
-    }
-  }, [showModal]);
-
-  function preventMomentumScroll(el) {
-    const { scrollTop, offsetHeight, scrollHeight } = el;
-    if (scrollTop === 0) {
-      el.scrollTo(0, 1);
-      return true;
-    }
-    if (scrollTop + offsetHeight >= scrollHeight) {
-      el.scrollTo(0, scrollHeight - offsetHeight - 1);
-      return true;
-    }
-    return false;
-  }
   const initiateModal = () => {
-    const modalOptions = {};
-    console.log(document.querySelector('.modal'));
-    const test1 = document.querySelector('.modal');
-    const testInstance = M.Modal.init(test1, { dismissible: false });
-    console.log(testInstance);
-    testInstance.open();
-    // console.log(
-    //   M.Modal.init(document.querySelectorAll('.modal'), modalOptions),
-    // );
-    // let modalIns = M.Modal.init(modalEl.current, modalOptions);
-    // console.log(modalIns);
-    // console.log(modalEl.modal('open'));
+    modalInstance = M.Modal.init(document.querySelector('.modal'), {
+      onCloseEnd: () => {
+        modalInstance.close();
+        setSliderInstance(null);
+        setDetail(null);
+      },
+    });
+    modalInstance.open();
   };
 
   const initiateSlider = () => {
@@ -105,30 +44,25 @@ const WorkList = () => {
   };
 
   const moveNextSlide = (e) => {
+    console.log('next');
     e.preventDefault();
     e.stopPropagation();
     sliderInstance.next();
   };
 
   const openModal = (project) => {
-    console.log(modalEl);
-    // modalEl.current.classList.toggle('active');
-    // modalEl.current.classList.remove('leave');
-    setShowModal(true);
     initiateModal();
     initiateSlider();
-    // modalInstance.open();
     setDetail(project);
+    setImages(project);
   };
 
-  const closeModal = (e) => {
-    // modalEl.current.classList.remove('active');
-    // modalEl.current.classList.add('leave');
-    modalInstance.close();
-    setShowModal(false);
-    setModalInstance(null);
-    setSliderInstance(null);
-    setDetail(null);
+  const setImages = ({ image1, image2, image3, image4 }) => {
+    const images = [image1, image2, image3, image4];
+    const projectImages = document.querySelectorAll('.projectImage');
+    for (let i = 0; i < images.length; i++) {
+      projectImages[i].src = images[i];
+    }
   };
 
   if (loading) {
@@ -171,28 +105,7 @@ const WorkList = () => {
         ))}
       </div>
 
-      <div ref={modalEl} id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">
-            Agree
-          </a>
-        </div>
-      </div>
-
-      {/* <div
-        ref={modalEl}
-        onScroll={(e) => preventMomentumScroll(e.currentTarget)}
-        onTouchMove={(e) => {
-          if (!preventMomentumScroll(e.currentTarget)) {
-            e.stopPropagation();
-          }
-        }}
-        className="pk-modal-frame"
-      >
+      <div id="modal1" class="modal pk-modal-frame">
         <div className="pk-modal-body">
           <div className="pk-modal-inner">
             <div className="pk-modal-slides">
@@ -222,22 +135,20 @@ const WorkList = () => {
                     </a>
                   </div>
                 </div>
-                {detail && (
-                  <ul className="slides">
-                    <li>
-                      <img src={detail.image1} />
-                    </li>
-                    <li>
-                      <img src={detail.image2} />
-                    </li>
-                    <li>
-                      <img src={detail.image3} />
-                    </li>
-                    <li>
-                      <img src={detail.image4} />
-                    </li>
-                  </ul>
-                )}
+                <ul className="slides">
+                  <li>
+                    <img class="projectImage" src="" alt="" />
+                  </li>
+                  <li>
+                    <img class="projectImage" src="" alt="" />
+                  </li>
+                  <li>
+                    <img class="projectImage" src="" alt="" />
+                  </li>
+                  <li>
+                    <img class="projectImage" src="" alt="" />
+                  </li>
+                </ul>
               </div>
             </div>
             {detail && (
@@ -268,8 +179,8 @@ const WorkList = () => {
             </div>
           </div>
         </div>
-        <div className="pk-modal-overlay" onClick={closeModal}></div>
-      </div> */}
+        {/* <div className="pk-modal-overlay" onClick={closeModal}></div> */}
+      </div>
     </div>
   );
 };
