@@ -1,10 +1,13 @@
 #content-portfolio {
   font: bold 14px/1.4 'Open Sans', arial, sans-serif;
   letter-spacing: 0.15em;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   min-height: 24rem;
   #content-portfolio-title {
     padding: 10px;
     font-size: large;
+  }
+  #content-portfolio-body {
+    padding: 2.5rem;
   }
 }

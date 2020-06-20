@@ -44,7 +44,6 @@ const WorkList = () => {
   };
 
   const moveNextSlide = (e) => {
-    console.log('next');
     e.preventDefault();
     e.stopPropagation();
     sliderInstance.next();
@@ -62,6 +61,7 @@ const WorkList = () => {
     const projectImages = document.querySelectorAll('.projectImage');
     for (let i = 0; i < images.length; i++) {
       projectImages[i].src = images[i];
+      projectImages[i].alt = ('project-image' + [i + 1]).toString();
     }
   };
 
@@ -97,7 +97,7 @@ const WorkList = () => {
   return (
     <div
       className="work-list-wrapper"
-      style={{ padding: '1.5rem', margin: '0 4rem' }}
+      style={{ padding: '1.5rem', margin: '0 2rem' }}
     >
       <div className="work-list row">
         {projects.map((project) => (
@@ -161,17 +161,17 @@ const WorkList = () => {
             )}
             <div className="pk-modal-footer link-quit container-fluid">
               {detail && (
-                <div>
-                  <a
-                    className="waves-effect waves-light btn red accent-3"
-                    href={detail.url}
-                  >
-                    Visit Site
-                    <i className="material-icons right">open_in_new</i>
+                <div id="modal-visit-site">
+                  <a href={detail.url} target="_blank" className="cta">
+                    <span>Visit Site</span>
+                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
                   </a>
                 </div>
               )}
-              <div>
+              <div id="modal-quit">
                 <a className="modal-close waves-effect btn-flat">
                   <i className="material-icons center">close</i>
                 </a>
@@ -179,7 +179,6 @@ const WorkList = () => {
             </div>
           </div>
         </div>
-        {/* <div className="pk-modal-overlay" onClick={closeModal}></div> */}
       </div>
     </div>
   );

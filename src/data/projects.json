@@ -8,7 +8,8 @@
     "image2": "images/test2.png",
     "image3": "images/test3.jpg",
     "image4": "images/test4.jpg",
-    "description": "This is testing testing. there will be limitation of number of lettter due to the matching the height of the component. It needs more words because it is a description for a project. a little more, there will be alot to say. say good bye."
+    "description": "This is testing testing. there will be limitation of number of lettter due to the matching the height of the component. It needs more words because it is a description for a project. a little more, there will be alot to say. say good bye.",
+    "url": "http://rclass.iptime.org:9999/19PM_albarang"
   },
   {
     "id": 2,
@@ -19,6 +20,7 @@
     "image2": "images/test2.png",
     "image3": "images/test3.jpg",
     "image4": "images/test4.jpg",
-    "description": "This is testing testing. there will be limitation of number of lettter due to the matching the height of the component. It needs more words because it is a description for a project. a little more, there will be alot to say. say good bye."
+    "description": "This is testing testing. there will be limitation of number of lettter due to the matching the height of the component. It needs more words because it is a description for a project. a little more, there will be alot to say. say good bye.",
+    "url": "http://rclass.iptime.org:9999/19PM_Developers_final/business"
   }
 ]

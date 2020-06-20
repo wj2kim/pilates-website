@@ -4,7 +4,7 @@ import './Blog.scss';
 const Blog = ({ post }) => {
   const { title, url, imageUrl, preview, date } = post;
   return (
-    <div class="single-post col s12 m6">
+    <a href={url} target="_blank" class="single-post col s12 m6">
       <div class="card">
         <div class="card-image">
           <img src={imageUrl} alt={title + 'image'} />
@@ -15,16 +15,16 @@ const Blog = ({ post }) => {
         </div>
         <div class="card-body">{preview}...</div>
         <div class="card-link">
-          <a href={url} target="_blank" className="cta">
+          {/* <a href={url} target="_blank" className="cta">
             <span>Take a look</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

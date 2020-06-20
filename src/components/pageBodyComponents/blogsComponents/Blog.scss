@@ -1,5 +1,6 @@
 .single-post {
   margin: 2rem 0 2rem 0;
+  color: #000;
   .card {
     box-shadow: none;
     // padding: 0 5rem;
@@ -143,4 +144,11 @@ $underlineHeight: 8%;
 }
 .cta:active {
   transform: scale(0.96);
+}
+
+.single-post.disactive > * {
+  opacity: 0.5;
+}
+.single-post.active .card-title {
+  color: #00a884;
 }

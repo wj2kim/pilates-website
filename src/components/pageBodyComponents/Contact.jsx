@@ -104,7 +104,7 @@ const Contact = () => {
         <a className="link-2">CONTACT</a>
       </div>
       <div id="content-contact-subtitle">
-        If you want to work together, don't hesitate to contact me!
+        Let's work together or have some coffee!
       </div>
       <div id="content-contact-body" className="container-fluid">
         <div className="row">
@@ -124,7 +124,9 @@ const Contact = () => {
                   maxLength="30"
                   onChange={onNameChange}
                 />
-                <label for="input-name">Name</label>
+                <label for="input-name">
+                  Name <span className="required-mark">*</span>
+                </label>
                 <span className="error">{nameError}</span>
               </div>
             </div>
@@ -139,7 +141,9 @@ const Contact = () => {
                   maxLength="40"
                   onChange={onEmailChange}
                 />
-                <label for="input-email">Email</label>
+                <label for="input-email">
+                  Email <span className="required-mark">*</span>
+                </label>
                 <span className="error">{emailAddressError}</span>
               </div>
             </div>
@@ -154,7 +158,9 @@ const Contact = () => {
                   maxLength="300"
                   onChange={onMessageChange}
                 />
-                <label for="input-message">Message</label>
+                <label for="input-message">
+                  Message <span className="required-mark">*</span>
+                </label>
                 <span className="error">{messageError}</span>
               </div>
             </div>

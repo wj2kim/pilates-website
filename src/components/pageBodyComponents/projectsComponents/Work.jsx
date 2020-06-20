@@ -5,9 +5,9 @@ const Work = ({ project, openModal }) => {
   const { title, thumbnailImage } = project;
 
   return (
-    <div className="work col s6 m4" style={{ padding: 0, marginLeft: 0 }}>
+    <div className="single-work work col s12 m6 l6 xl4">
       <div className="card card-image" style={{ margin: 0 }}>
-        <div className="card-image">
+        <div className="card-image work-image">
           <img
             src={thumbnailImage}
             style={{ objectFit: 'cover' }}
