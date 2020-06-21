@@ -26,18 +26,44 @@
   }
 }
 
+$background-color: linear-gradient(270deg, #235aa6, #101b3b);
+
 .about-me .about-content {
   width: fit-content;
   padding: 0rem !important;
+  // background-color: $background-color;
+  background-color: hsla(0, 0%, 95%, 0.97);
+  .profile-wrapper {
+    padding: 5%;
+  }
 }
 
 .about-content.back-image {
   position: relative;
   right: 30% !important;
-  z-index: -1;
+  z-index: -2;
 }
 
 .profile-side-image {
   height: 100%;
   width: 160%;
+}
+
+.program-icon a.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.program-icon a.icon svg,
+.program-icon a.icon img {
+  filter: url(/public/images/about-icons/filter.svg#grayscale);
+  filter: gray;
+  -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+  -webkit-transition: all 0.15s;
+}
+
+.program-icon a.icon svg:hover,
+.program-icon a.icon img:hover {
+  filter: grayscale(0) contrast(175%) brightness(103%);
+  -webkit-filter: grayscale(0) contrast(160%) brightness(103%);
 }
