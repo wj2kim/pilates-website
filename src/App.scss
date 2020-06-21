@@ -4,6 +4,7 @@
   font-size: 1.8rem;
   color: #000;
   letter-spacing: -0.018rem;
+  // background-image: linear-gradient(45deg, #bfbfd9, #fff);
 }
 
 html {
@@ -13,11 +14,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-}
-*,
-::after,
-::before {
-  box-sizing: inherit;
+  // background-color: red;
 }
 @-ms-viewport {
   width: device-width;
@@ -218,9 +215,6 @@ h3 {
   }
 }
 
-:hover {
-  outline: none;
-}
 html {
   font-size: 62.5%;
   -ms-text-size-adjust: 100%;

@@ -1,4 +1,43 @@
 #content-about-body {
-  box-shadow: 6.5rem 2.5rem 5rem 0.7rem rgba(0, 0, 0, 0.13);
-  margin: 20px;
+  // box-shadow: 6.5rem 2.5rem 5rem 0.7rem rgba(0, 0, 0, 0.13);
+}
+
+#content-about {
+  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  letter-spacing: 0.15em;
+  // margin-bottom: 3rem;
+  // min-height: 24rem;
+  #content-about-title {
+    padding: 10px;
+    font-size: large;
+  }
+  #image-stack {
+    padding-left: 6%;
+    padding-right: 6%;
+    // opacity: 0.2;
+    // background-image: linear-gradient(
+    //   45deg,
+    //   #fff,
+    //   #ff6a00,
+    //   #ee0979,
+    //   #ff6a00,
+    //   #fff
+    // );
+  }
+}
+
+.about-me .about-content {
+  width: fit-content;
+  padding: 0rem !important;
+}
+
+.about-content.back-image {
+  position: relative;
+  right: 30% !important;
+  z-index: -1;
+}
+
+.profile-side-image {
+  height: 100%;
+  width: 160%;
 }
