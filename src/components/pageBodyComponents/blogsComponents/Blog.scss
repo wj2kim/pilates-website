@@ -67,7 +67,6 @@
 }
 
 $underlineColor: linear-gradient(5deg, #09d4b2 0, #0bd498);
-$underlineHeight: 8%;
 
 .underline-effect-2 {
   position: relative;
@@ -82,7 +81,7 @@ $underlineHeight: 8%;
     position: absolute;
     background-image: $underlineColor;
     z-index: 2;
-    height: $underlineHeight;
+    height: 8%;
   }
 
   &::before {

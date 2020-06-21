@@ -1,57 +1,85 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './About.scss';
 
 const About = () => {
+  const [explanation, setExplanation] = useState('');
+  const [iconList, setIconList] = useState(null);
+  const iconsEl = useRef();
+  const iconsExplain = {
+    react: 'REACT - fun and exciting to work with',
+    javascript: 'JS - caught upto ES6',
+    responsive: 'UI/UX - getting better and better',
+    java: 'JAVA - worked a lot with it',
+    spring: 'SPRING - have a good experience on it ',
+  };
+
+  useEffect(() => {
+    if (iconsEl.current) {
+      let temp = [...iconsEl.current.children];
+      temp.pop();
+      setIconList(temp);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (iconList) {
+      iconList.forEach((icon, idx) => {
+        icon.addEventListener('mouseenter', (e) => {
+          switch (e.target.firstChild.getAttribute('id')) {
+            case 'react-icon':
+              setExplanation(iconsExplain.react);
+              break;
+            case 'javascript-icon':
+              setExplanation(iconsExplain.javascript);
+              break;
+            case 'responsive-icon':
+              setExplanation(iconsExplain.responsive);
+              break;
+            case 'java-icon':
+              setExplanation(iconsExplain.java);
+              break;
+            case 'spring-icon':
+              setExplanation(iconsExplain.spring);
+              break;
+            default:
+              setExplanation('');
+              break;
+          }
+        });
+        icon.addEventListener('mouseleave', () => {
+          setExplanation('');
+        });
+      });
+    }
+  }, [iconList]);
+
   return (
     <section id="content-about" class="container-fluid">
       <div id="content-about-title">
         <a className="link-2">ABOUT</a>
       </div>
-      {/* <div id="image-stack" class="image-stack">
-        <div id="content-about-body" class="col s12">
-          <div class="row about-me-wrapper">
-            <div class="col s2">
-              <img
-                src="images/mypic.jpg"
-                alt="paulwoojungkim_selfie"
-                class="circle responsive-img z-depth-1"
-              />
-            </div>
-            <div class="col s10">
-              <span class="black-text">
-                This is a square image. Add the "circle" class to it to make it
-                appear circular.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div class="header">
-          <div class="logo"></div>
-          <label class="night-mode" for="night" onclick="enableNight()">
-            <i class="fa fa-moon-o"></i>
-          </label>
-        </div> */}
       <div id="image-stack" class="image-stack">
         <div class="row about-me">
-          <div className="about-content col m6">
+          <div className="about-content col s12 m6">
             <div className="profile-wrapper">
-              <div className="profile-location">
-                <i className="material-icons">room</i>
-                Seoul, S. Korea
-              </div>
-              <div className="profile-name">Paul Woo Jung Kim</div>
-              <div className="profile-title">Junior Front-End Developer</div>
-              <div className="profile-summary">
-                Love makaing interactive web, focusing on front-end
-                technologies. I work best as I can. smart user interface and
-                useful interaction. devloping rich skills on web application.
+              <div className="profile-detail">
+                <div className="profile-location">
+                  <i className="material-icons">room</i>
+                  Seoul, S. Korea
+                </div>
+                <div className="profile-name">Paul Woo Jung Kim</div>
+                <div className="profile-title">JUNIOR FRONT-END DEVELOPER</div>
+                <div className="profile-summary underline-effect-1">
+                  Love makaing interactive web, focusing on front-end
+                  technologies. I work best as I can. smart user interface and
+                  useful interaction. devloping rich skills on web application.
+                </div>
               </div>
             </div>
             <div className="icon-wrapper">
-              <div className="icons row">
-                <div className="program-icon col s2">
-                  <a href="#" className="icon" id="react-logo">
+              <div ref={iconsEl} className="icons row">
+                <div className="program-icon col s2" style={{ padding: 0 }}>
+                  <a href="javascript:void(0)" className="icon" id="react-icon">
                     <svg
                       version="1.1"
                       id="Layer_2_1_"
@@ -59,7 +87,8 @@ const About = () => {
                       x="0px"
                       y="0px"
                       viewBox="0 0 841.9 595.3"
-                      enable-background="new 0 0 841.9 595.3"
+                      enableBackground="new 0 0 841.9 595.3"
+                      style={{ marginLeft: '10%' }}
                     >
                       <g>
                         <path
@@ -103,7 +132,11 @@ const About = () => {
                   </a>
                 </div>
                 <div className="program-icon col s2">
-                  <a href="#" className="icon" id="javascript-logo">
+                  <a
+                    href="javascript:void(0)"
+                    className="icon"
+                    id="javascript-icon"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
@@ -120,23 +153,33 @@ const About = () => {
                   </a>
                 </div>
                 <div className="program-icon col s2">
-                  <a href="#" className="icon" id="uiux-logo">
+                  <a
+                    href="javascript:void(0)"
+                    className="icon"
+                    id="responsive-icon"
+                  >
                     <img
                       src="images/about-icons/responsive.svg"
                       al="responsive.svg"
+                      style={{ marginLeft: '12%' }}
                     />
                   </a>
                 </div>
                 <div className="program-icon col s2">
-                  <a href="#" className="icon" id="java-logo">
+                  <a href="javascript:void(0)" className="icon" id="java-icon">
                     <img
                       src="images/about-icons/java-icon.svg"
                       al="java-icon.svg"
+                      style={{ marginLeft: '8%' }}
                     />
                   </a>
                 </div>
                 <div className="program-icon col s2">
-                  <a href="#" className="icon" id="spring-logo">
+                  <a
+                    href="javascript:void(0)"
+                    className="icon"
+                    id="spring-icon"
+                  >
                     <img
                       src="images/about-icons/spring-icon.svg"
                       al="spring-icon.svg"
@@ -145,18 +188,20 @@ const About = () => {
                 </div>
                 <div className="program-icon col s2"></div>
               </div>
+              <div className="icon-explain-wrapper">
+                <div id="icon-explain" className="icon-explain">
+                  <span id="icon-explain-span">{explanation}</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="about-content back-image col m6">
+          <div className="about-content back-image col s12 m6">
             <img
               src="images/profile-side-image6.svg"
               alt="profile-side-image"
               class="profile-side-image"
             />
           </div>
-        </div>
-        <div className="icon-explain-wrapper">
-          <div className="icon-explain"></div>
         </div>
       </div>
     </section>

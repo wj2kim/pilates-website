@@ -11,7 +11,7 @@ const Blog = ({ post }) => {
         </div>
         <div className="card-title">{title}</div>
         <div className="card-date">
-          <a className="underline-effect-2">{date}</a>
+          <div className="underline-effect-2">{date}</div>
         </div>
         <div class="card-body">{preview}...</div>
         <div class="card-link">
