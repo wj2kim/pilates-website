@@ -78,7 +78,10 @@ const About = () => {
             </div>
             <div className="icon-wrapper">
               <div ref={iconsEl} className="icons row">
-                <div className="program-icon col s2" style={{ padding: 0 }}>
+                <div
+                  className="program-icon col s2 real"
+                  style={{ padding: 0 }}
+                >
                   <a href="javascript:void(0)" className="icon" id="react-icon">
                     <svg
                       version="1.1"
@@ -131,7 +134,7 @@ const About = () => {
                     </svg>
                   </a>
                 </div>
-                <div className="program-icon col s2">
+                <div className="program-icon col s2 real">
                   <a
                     href="javascript:void(0)"
                     className="icon"
@@ -152,7 +155,7 @@ const About = () => {
                     </svg>
                   </a>
                 </div>
-                <div className="program-icon col s2">
+                <div className="program-icon col s2 real">
                   <a
                     href="javascript:void(0)"
                     className="icon"
@@ -174,7 +177,7 @@ const About = () => {
                     />
                   </a>
                 </div>
-                <div className="program-icon col s2">
+                <div className="program-icon col s2 real">
                   <a
                     href="javascript:void(0)"
                     className="icon"
@@ -186,7 +189,7 @@ const About = () => {
                     />
                   </a>
                 </div>
-                <div className="program-icon col s2"></div>
+                <div className="program-icon col s2 non-real"></div>
               </div>
               <div className="icon-explain-wrapper">
                 <div id="icon-explain" className="icon-explain">

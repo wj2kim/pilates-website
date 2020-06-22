@@ -1,0 +1,56 @@
+#navigation {
+  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  letter-spacing: 0.15em;
+}
+
+#web-logo {
+  background-image: url('/public/images/navigation-icons/initialLetter-logo.svg');
+  background-size: cover;
+}
+
+.brand-logo {
+  height: 100%;
+  left: 5%;
+  #web-logo {
+    height: 100%;
+    vertical-align: none !important;
+  }
+}
+
+nav.white {
+  height: 5rem;
+  padding-right: 3rem;
+  // padding-top: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  nav.white {
+    padding-right: 0;
+    // padding-top: 0.5rem;
+  }
+}
+
+.nav-wrapper {
+  //   padding: 1rem;
+  //   height: 140% !important;
+}
+
+.waves-effect.waves-brown .waves-ripple {
+  background-color: rgba(35, 90, 166, 0.9);
+}
+
+.nav-wrapper {
+  .brand-logo {
+    height: 100%;
+  }
+  ul {
+    height: 100%;
+    li {
+      height: 100%;
+      a {
+        height: 100%;
+        padding-top: 5px;
+      }
+    }
+  }
+}

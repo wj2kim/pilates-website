@@ -3,18 +3,26 @@ import './MainBanner.scss';
 
 const MainBanner = () => {
   return (
-    <section class="container-fluid main-banner">
-      <div class="row">
-        <div class="col-6 align-self-center">
-          <div class="whoami">
-            <p>
+    <section className="main-banner">
+      <div className="container-fluid">
+        <div className="row main-banner-row">
+          <div className="introduction col-6">
+            <div className="whoami">
               Hello, I am a Front-End Developer in S.Korea. Specialized in
               HTML/CSS/Javascipt and React. Enjoy my Portfolio !
-            </p>
+            </div>
+            <div className="mynameis">Paul Woo Jung Kim </div>
           </div>
-          <div class="name">Paul Woo Jung Kim</div>
+          <div className="intro-image col-6">
+            <div className="banner-image-wrapper">
+              <img
+                className="banner-image"
+                src="images/banner/banner-image.jpg"
+                alt="banner-image"
+              ></img>
+            </div>
+          </div>
         </div>
-        <div class="col-6 text-right text-xl-center"></div>
       </div>
     </section>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Navigation.scss';
 import M from 'materialize-css';
 
 const Navigation = () => {
@@ -8,47 +9,57 @@ const Navigation = () => {
 
   document.addEventListener('DOMContentLoaded', function () {
     const elems = document.querySelectorAll('.sidenav');
-    const instances = M.Sidenav.init(elems, navOptions);
+    M.Sidenav.init(elems, navOptions);
   });
 
   return (
     <div id="navigation">
-      <div id="sticky-top-menu" class="navbar-fixed">
-        <nav class="transparent z-depth-0">
-          <div class="nav-wrapper">
-            <a href="/" class="brand-logo left black-text">
-              Logo
+      <div id="sticky-top-menu" className="navbar-fixed ">
+        <nav className="white z-depth-0">
+          <div className="nav-wrapper">
+            <a href="/" className="brand-logo left black-text">
+              <img
+                id="web-logo"
+                src="images/navigation-icons/initialLetter-logo.svg"
+              ></img>
             </a>
             <a
               href="#"
               data-target="mobile-responsive"
-              class="sidenav-trigger right black-text"
+              className="sidenav-trigger right black-text"
             >
-              <i class="material-icons">menu</i>
+              <i className="material-icons">menu</i>
             </a>
-            <ul class="right hide-on-med-and-down">
+            <ul className="right hide-on-med-and-down">
               <li>
-                <a class="black-text waves-effect waves-teal" href="/Home">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a class="black-text waves-effect waves-teal" href="/about">
+                <a
+                  className="black-text waves-effect waves-brown"
+                  href="#content-about"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a class="black-text waves-effect waves-teal" href="/portfolio">
-                  Portfolio
+                <a
+                  className="black-text waves-effect waves-brown"
+                  href="#content-portfolio"
+                >
+                  Projects
                 </a>
               </li>
               <li>
-                <a class="black-text waves-effect waves-teal" href="/blog">
-                  Blog
+                <a
+                  className="black-text waves-effect waves-brown"
+                  href="#content-blog"
+                >
+                  Blogs
                 </a>
               </li>
               <li>
-                <a class="black-text waves-effect waves-teal" href="/contact">
+                <a
+                  className="black-text waves-effect waves-brown"
+                  href="#content-contact"
+                >
                   Contact
                 </a>
               </li>
@@ -56,21 +67,18 @@ const Navigation = () => {
           </div>
         </nav>
       </div>
-      <ul class="sidenav" id="mobile-responsive">
+      <ul className="sidenav" id="mobile-responsive">
         <li>
-          <a href="/Home">Home</a>
+          <a href="#content-about">About</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a href="#content-portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="/portfolio">Portfolio</a>
+          <a href="#content-blog">Blog</a>
         </li>
         <li>
-          <a href="/blog">Blog</a>
-        </li>
-        <li>
-          <a href="/contact">Contact</a>
+          <a href="#content-contact">Contact</a>
         </li>
       </ul>
     </div>
