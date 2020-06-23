@@ -7,7 +7,7 @@ const Projects = () => {
     <section id="content-portfolio" className="container-fluid">
       <div id="content-portfolio-title">
         <a herf="#" className="link-2">
-          PROJECTS
+          Projects
         </a>
       </div>
       <div id="content-portfolio-body">

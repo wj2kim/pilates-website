@@ -1,10 +1,12 @@
 #content-portfolio {
   min-height: 100vh;
-  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  font: bold 14px/1.4 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   letter-spacing: 0.15em;
   margin-bottom: 1rem;
   min-height: 24rem;
   #content-portfolio-title {
+    padding-top: 5rem !important;
     padding: 10px;
     font-size: large;
   }

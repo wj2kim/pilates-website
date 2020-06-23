@@ -5,10 +5,12 @@
 
 #content-about {
   min-height: 100vh;
-  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  font: bold 14px/1.4 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   letter-spacing: 0.15em;
   #content-about-title {
     padding: 10px;
+    padding-top: 5rem;
     font-size: large;
   }
   #image-stack {
@@ -21,8 +23,8 @@
   height: 23rem;
 }
 .about-me .about-content {
-  font: bold 14px/1.4 'LibreBaskerville-Regular', 'Palatino Linotype',
-    'Times New Roman', serif;
+  font: bold 14px/1.4 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   width: fit-content;
   padding: 0rem !important;
   background-color: hsla(0, 0%, 95%, 0.97);
@@ -86,13 +88,13 @@
   }
 }
 .icon-explain-wrapper {
-  padding: 5%;
+  padding: 3%;
   #icon-explain {
     text-align: center;
     #icon-explain-span {
-      font-size: medium;
-      letter-spacing: 0em;
-      font-family: fantasy;
+      font-size: 15px;
+      letter-spacing: -0.1em;
+      font-family: monospace;
     }
   }
 }
@@ -172,7 +174,7 @@
     right: 30% !important;
   }
   .icon-explain-wrapper {
-    padding: 5%;
+    padding: 4%;
     #icon-explain {
       #icon-explain-span {
         font-size: large;
@@ -247,7 +249,7 @@
     }
   }
   .icon-explain-wrapper {
-    padding: 5%;
+    padding: 4%;
     #icon-explain {
       #icon-explain-span {
         font-size: small;
@@ -282,6 +284,9 @@
         }
       }
     }
+  }
+  #icon-explain-span {
+    font-size: 13px !important;
   }
 }
 

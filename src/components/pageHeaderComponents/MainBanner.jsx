@@ -12,8 +12,10 @@ const MainBanner = () => {
         <div className="row main-banner-row">
           <div className="introduction col-6">
             <div className="whoami">
-              Hello, I am a Front-End Developer in S.Korea. Specialized in
-              HTML/CSS/Javascipt and React. Enjoy my Portfolio !
+              Hello, I am weird but <span className="textEffect">cheerful</span>{' '}
+              guy in S.Korea. I look upto professional Front-End Developer and{' '}
+              <span className="textEffect">I am on it's way</span>. Enjoy my{' '}
+              <span className="textEffect">portfolio.</span>
             </div>
             <div className="mynameis">
               Paul Woo <br /> Jung Kim

@@ -21,7 +21,7 @@ const Navigation = () => {
   return (
     <div id="navigation">
       <div id="sticky-top-menu" className="navbar-fixed ">
-        <nav className="transparent z-depth-0">
+        <nav className="white z-depth-0">
           <div className="nav-wrapper">
             <a href="/" className="brand-logo left black-text">
               <img

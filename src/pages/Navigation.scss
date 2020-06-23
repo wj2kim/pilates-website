@@ -1,5 +1,6 @@
 #navigation {
-  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  font: bold 14px/1.4 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   letter-spacing: 0.15em;
 }
 
@@ -19,13 +20,14 @@
   }
 }
 
-nav.transparent {
+nav.white {
   height: 5rem;
   padding-right: 3rem;
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 @media (max-width: 992px) {
-  nav.transparent {
+  nav.white {
     padding-right: 0;
   }
 }
@@ -35,10 +37,6 @@ nav.transparent {
   //   height: 140% !important;
 }
 
-.waves-effect.waves-brown .waves-ripple {
-  background-color: rgba(35, 90, 166, 0.9);
-}
-
 nav .sidenav-trigger i {
   font-size: 40px !important;
 }
@@ -46,6 +44,7 @@ nav .sidenav-trigger i {
 .nav-wrapper {
   .brand-logo {
     height: 100%;
+    top: 0 !important;
   }
   ul {
     height: 100%;

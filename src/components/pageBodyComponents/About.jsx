@@ -56,7 +56,7 @@ const About = () => {
   return (
     <section id="content-about" class="container-fluid">
       <div id="content-about-title">
-        <a className="link-2">ABOUT</a>
+        <a className="link-2">About Me</a>
       </div>
       <div id="image-stack" class="image-stack">
         <div class="row about-me">
@@ -70,9 +70,9 @@ const About = () => {
                 <div className="profile-name">Paul Woo Jung Kim</div>
                 <div className="profile-title">JUNIOR FRONT-END DEVELOPER</div>
                 <div className="profile-summary underline-effect-1">
-                  Love makaing interactive web, focusing on front-end
-                  technologies. I work best as I can. smart user interface and
-                  useful interaction. devloping rich skills on web application.
+                  I love handling interactive web, making smart user interface
+                  and useful interaction. Currently, I am focusing on developing
+                  rich skills on web application and even optimization.
                 </div>
               </div>
             </div>
