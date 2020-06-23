@@ -20,6 +20,26 @@
   }
 }
 
+// .background-relation {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   z-index: 0;
+//   width: 100%;
+//   height: 100%;
+
+//   .dots {
+//     background-color: #ffffff !important;
+//     background-color: rgba(255, 255, 255, 0.5) !important;
+//     // background: url(/public/images/banner/background-relation.svg) no-repeat
+//     //   center center;
+//     // background-size: cover;
+
+//     width: 100%;
+//     height: 100vh;
+//   }
+// }
+
 .introduction.col-6 {
   align-self: center !important;
   flex: 0 0 50%;
@@ -33,26 +53,29 @@
     font-size: 1.2rem;
     position: relative;
     z-index: 1;
-    padding-top: 2rem;
-    margin-bottom: 2rem;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+    // color: #101b3b;
   }
   .mynameis {
     font-family: serif;
     padding-top: 2vh;
     padding-bottom: 3rem;
     // font-size: 22.5vh;
-    font-size: 12rem;
+    font-size: 11rem;
     font-weight: 900;
     line-height: 16.5vh;
     letter-spacing: -1rem;
+    line-height: 9rem;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    width: 80vw;
+    left: 10vw;
+    // width: 80vw;
     z-index: 1;
     position: relative;
     display: inline-block;
-    background-image: linear-gradient(20deg, #ee0979 0, #ff6a00);
+    background-image: linear-gradient(500deg, #ee0979 0, #ff6a00);
   }
 }
 
@@ -79,14 +102,23 @@
   width: 100%;
   position: relative;
   // width: 55rem;
-  right: 15vw;
+  right: 5vw;
+  // background-color: #101b3b;
   img {
-    width: 90vw;
+    width: 70vw;
     height: 100vh;
   }
 }
+@media (min-width: 1600px) {
+  .whoami {
+    font-size: 1.4rem !important;
+  }
+  .mynameis {
+    font-size: 13rem !important;
+  }
+}
 
-@media (min-width: 1200px) {
+@media (max-width: 1599px) {
   .main-row-wrapper {
     max-width: 1140px;
   }
@@ -98,7 +130,7 @@
     letter-spacing: -1.6rem !important;
     line-height: 8rem !important;
     max-width: 60vw;
-    font-size: 10.5rem !important;
+    font-size: 9rem !important;
   }
 }
 @media (max-width: 1199px) {
@@ -110,7 +142,7 @@
     width: 60vw !important;
     letter-spacing: -1.2rem !important;
     line-height: 6.2rem !important;
-    font-size: 10rem !important;
+    font-size: 8rem !important;
   }
 }
 
@@ -158,7 +190,7 @@
     line-height: 5.6rem !important;
     letter-spacing: -1.3rem !important;
     // font-size: 13.5vh !important;
-    font-size: 9.5rem !important;
+    font-size: 7.5rem !important;
   }
 }
 @media (max-width: 720px) {
@@ -176,7 +208,7 @@
     line-height: 5.6rem !important;
     letter-spacing: -1.3rem !important;
     // font-size: 13.5vh !important;
-    font-size: 9rem !important;
+    font-size: 7.5rem !important;
   }
   .banner-image-wrapper {
     height: 100%;
@@ -224,6 +256,21 @@
     width: 80vw !important;
     padding-top: 0 !important;
     letter-spacing: -1.3rem !important;
-    font-size: 6rem !important;
+    font-size: 5rem !important;
   }
 }
+
+// .kenburns-bottom-right {
+//   animation: kenburns-bottom-right 3s ease-out both;
+// }
+
+// @keyframes kenburns-bottom-right {
+//   0% {
+//     transform: scale(1) translate(0, 0);
+//     transform-origin: 84% 84%;
+//   }
+//   100% {
+//     transform: scale(1.25) translate(10px, 8px);
+//     transform-origin: right bottom;
+//   }
+// }

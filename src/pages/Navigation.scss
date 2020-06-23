@@ -11,22 +11,22 @@
 .brand-logo {
   height: 100%;
   left: 5%;
+  top: 0.5rem;
   #web-logo {
-    height: 100%;
+    // top: 0.5rem;
+    height: 60%;
     vertical-align: none !important;
   }
 }
 
-nav.white {
+nav.transparent {
   height: 5rem;
   padding-right: 3rem;
-  // padding-top: 0.5rem;
 }
 
 @media (max-width: 992px) {
-  nav.white {
+  nav.transparent {
     padding-right: 0;
-    // padding-top: 0.5rem;
   }
 }
 

@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <div id="canvas-wrapper">
         <div id="canvas">
-          <div id="navigation-wrapper">
+          {/* <div id="navigation-wrapper">
             <Navigation />
-          </div>
+          </div> */}
           <div id="page-header-wrapper">
             <PageHeader />
           </div>
