@@ -4,7 +4,7 @@ import data from '../../../data/posts.json';
 import './BlogList.scss';
 
 /* 
-due to tistory blog open api needs steady renewal
+due to tistory blog open api needs repetitive renewal
 static data is required
 */
 

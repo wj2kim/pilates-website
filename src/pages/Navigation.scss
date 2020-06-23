@@ -39,6 +39,10 @@ nav.transparent {
   background-color: rgba(35, 90, 166, 0.9);
 }
 
+nav .sidenav-trigger i {
+  font-size: 40px !important;
+}
+
 .nav-wrapper {
   .brand-logo {
     height: 100%;
@@ -52,5 +56,15 @@ nav.transparent {
         padding-top: 5px;
       }
     }
+  }
+}
+
+#mobile-responsive {
+  background-color: #1c1d25;
+  li .sidenav-menu {
+    color: #fff;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 10%;
   }
 }

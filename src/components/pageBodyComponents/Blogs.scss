@@ -1,4 +1,5 @@
 #content-blog {
+  min-height: 100vh;
   font: bold 14px/1.4 'Open Sans', arial, sans-serif;
   letter-spacing: 0.15em;
   // margin-bottom: 3rem;
@@ -6,5 +7,11 @@
   #content-blog-title {
     padding: 10px;
     font-size: large;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  #content-blog-title {
+    font-size: xx-large !important;
   }
 }

@@ -14,15 +14,7 @@ const Blog = ({ post }) => {
           <div className="underline-effect-2">{date}</div>
         </div>
         <div class="card-body">{preview}...</div>
-        <div class="card-link">
-          {/* <a href={url} target="_blank" className="cta">
-            <span>Take a look</span>
-            <svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </a> */}
-        </div>
+        <div class="card-link"></div>
       </div>
     </a>
   );

@@ -106,8 +106,8 @@ const Contact = () => {
       <div id="content-contact-subtitle">
         Let's work together or have some coffee!
       </div>
-      <div id="content-contact-body" className="container-fluid">
-        <div className="row">
+      <div id="content-contact-body" className="contact-body row">
+        <div className="col s12 m6 row">
           <form
             noValidate={true}
             className="col s12 contact-form"
@@ -166,7 +166,7 @@ const Contact = () => {
             </div>
             <div id="button-area">
               <button
-                className="btn waves-effect waves-light"
+                className="btn waves-light"
                 type="submit"
                 name="action"
                 disabled={submitted && submitResult.success}
@@ -189,6 +189,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
+        <div id="contact-illustration" className="col s12 m6"></div>
       </div>
     </section>
   );

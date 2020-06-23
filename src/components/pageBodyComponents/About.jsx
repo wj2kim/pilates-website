@@ -60,7 +60,7 @@ const About = () => {
       </div>
       <div id="image-stack" class="image-stack">
         <div class="row about-me">
-          <div className="about-content col s12 m6">
+          <div className="about-content header col s12 m6">
             <div className="profile-wrapper">
               <div className="profile-detail">
                 <div className="profile-location">

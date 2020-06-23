@@ -6,18 +6,18 @@
     // padding: 0 5rem;
     // height: 15rem;
     .card-image {
-      height: 12rem;
+      height: 16rem;
       // box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.08);
     }
     .card-title {
       height: 4.5rem;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: bolder;
       opacity: 0.6;
       padding: 10px 0;
     }
     .card-date {
-      font-size: smaller;
+      font-size: small;
       font-weight: 300;
       font-stretch: extra-expanded;
       letter-spacing: 0.25em;
@@ -38,6 +38,17 @@
     }
   }
 }
+@media screen and (min-width: 1800px) {
+  .single-post .card .card-image {
+    height: 25rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .single-post .card .card-image {
+    height: 12rem;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .card-title {
@@ -51,6 +62,9 @@
   }
 }
 @media screen and (max-width: 425px) {
+  .single-post .card .card-image {
+    height: 16rem;
+  }
   .card-title {
     max-height: 4rem;
   }
@@ -66,7 +80,7 @@
 @media screen and (max-width: 320px) {
 }
 
-$underlineColor: linear-gradient(5deg, #09d4b2 0, #0bd498);
+$underlineColor: linear-gradient(90deg, #1e9afe, #60dfcd);
 
 .underline-effect-2 {
   position: relative;
@@ -149,5 +163,5 @@ $underlineColor: linear-gradient(5deg, #09d4b2 0, #0bd498);
   opacity: 0.5;
 }
 .single-post.active .card-title {
-  color: #00a884;
+  color: #00b7ff;
 }

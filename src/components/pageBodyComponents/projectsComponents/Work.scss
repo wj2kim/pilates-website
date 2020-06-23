@@ -1,13 +1,9 @@
 .card-image.work-image {
   position: relative;
-  // height: 80% !important;
 }
 
 .card-image {
   position: relative;
-  //   margin-top: 50px;
-  //   width: 500px;
-  //   height: 300px;
   width: 100%;
   height: 100%;
 
@@ -61,17 +57,17 @@
     border: solid 2px white;
     z-index: 1;
   }
+
   .button:hover a {
-    $backgroundColor: linear-gradient(5deg, #09d4b2 0, #0bd498);
-    color: #09d4b2;
+    color: #60dfcd;
     font-size: larger;
-    border: solid 3px #09d4b2;
+    border: solid 4px #60dfcd;
   }
 }
 
 .card-image:hover .overlay {
   display: block;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .card-image:hover .button {

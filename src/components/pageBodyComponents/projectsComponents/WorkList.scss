@@ -5,15 +5,20 @@
 .single-work.work {
   padding: 0px !important;
   margin-left: 0px !important;
-  height: 19rem !important;
+  height: 18rem !important;
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1841px) {
   .single-work.work {
     height: 30rem !important;
   }
+}
+@media screen and (max-width: 1440px) {
+  .single-work.work {
+    height: 16rem !important;
+  }
   .work-list-wrapper {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
+    // padding-left: 1% !important;
+    // padding-right: 1% !important;
   }
 }
 
@@ -267,6 +272,10 @@
   }
 }
 
+// #modal1 {
+//   height: 100vh;
+// }
+
 .material-icons {
   font-weight: normal;
   font-style: normal;
@@ -325,7 +334,7 @@ a.middle-indicator-text {
   }
 }
 .pk-modal-slides {
-  border-bottom: 3px solid #232b2b;
+  border-bottom: 3px solid #000000;
 }
 
 .link-quit {
@@ -338,7 +347,9 @@ a.middle-indicator-text {
 #modal-quit {
   .btn {
     background-color: none;
-    background-image: linear-gradient(2deg, #ee0979 0, #ff6a00);
+  }
+  a {
+    margin-top: -10px;
   }
   :hover {
     -webkit-animation: buttonOut 0.3s;

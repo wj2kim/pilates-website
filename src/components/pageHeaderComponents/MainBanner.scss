@@ -1,5 +1,5 @@
 .main-banner {
-  min-height: 95vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -20,26 +20,6 @@
   }
 }
 
-// .background-relation {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   z-index: 0;
-//   width: 100%;
-//   height: 100%;
-
-//   .dots {
-//     background-color: #ffffff !important;
-//     background-color: rgba(255, 255, 255, 0.5) !important;
-//     // background: url(/public/images/banner/background-relation.svg) no-repeat
-//     //   center center;
-//     // background-size: cover;
-
-//     width: 100%;
-//     height: 100vh;
-//   }
-// }
-
 .introduction.col-6 {
   align-self: center !important;
   flex: 0 0 50%;
@@ -49,6 +29,7 @@
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+
   .whoami {
     font-size: 1.2rem;
     position: relative;
@@ -64,18 +45,18 @@
     // font-size: 22.5vh;
     font-size: 11rem;
     font-weight: 900;
-    line-height: 16.5vh;
-    letter-spacing: -1rem;
-    line-height: 9rem;
+    // line-height: 16.5vh;
+    // letter-spacing: -1rem;
+    line-height: 7rem;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    left: 10vw;
-    // width: 80vw;
+    left: 45%;
+    width: 100%;
     z-index: 1;
     position: relative;
     display: inline-block;
-    background-image: linear-gradient(500deg, #ee0979 0, #ff6a00);
+    background-image: linear-gradient(20deg, #ee0979 20%, #ff6a00);
   }
 }
 
@@ -88,13 +69,13 @@
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  svg {
-    position: relative;
-    top: -1rem;
-    width: auto;
-    height: calc(100vh - 2.3rem);
-    max-height: 130rem;
-  }
+  // svg {
+  //   position: relative;
+  //   top: -1rem;
+  //   width: auto;
+  //   height: calc(100vh - 2.3rem);
+  //   max-height: 130rem;
+  // }
 }
 
 .banner-image-wrapper {
@@ -105,7 +86,7 @@
   right: 5vw;
   // background-color: #101b3b;
   img {
-    width: 70vw;
+    width: 50vw;
     height: 100vh;
   }
 }
@@ -127,10 +108,10 @@
   }
   .mynameis {
     padding-top: 6vh !important;
-    letter-spacing: -1.6rem !important;
-    line-height: 8rem !important;
-    max-width: 60vw;
-    font-size: 9rem !important;
+    letter-spacing: -0.8rem !important;
+    line-height: 5rem !important;
+    // max-width: 50vw;
+    font-size: 8.5rem !important;
   }
 }
 @media (max-width: 1199px) {
@@ -139,9 +120,10 @@
   }
   .mynameis {
     padding-top: 4vh !important;
-    width: 60vw !important;
-    letter-spacing: -1.2rem !important;
-    line-height: 6.2rem !important;
+    left: 30% !important;
+    // width: 50vw !important;
+    // letter-spacing: -0.8rem !important;
+    // line-height: 6.2rem !important;
     font-size: 8rem !important;
   }
 }
@@ -178,17 +160,20 @@
     // width: 100%;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .whoami {
     padding-top: 5vh !important;
     font-size: 1rem !important;
   }
   .mynameis {
     padding-top: 5vh !important;
-    padding-bottom: 10vh !important;
-    max-width: 80vw;
-    line-height: 5.6rem !important;
-    letter-spacing: -1.3rem !important;
+    // padding-bottom: 10vh !important;
+    width: 120% !important;
+    left: 25% !important;
+    // max-width: 80vw;
+    // left: 30% !important;
+    // line-height: 6rem !important;
+    // letter-spacing: -0.2rem !important;
     // font-size: 13.5vh !important;
     font-size: 7.5rem !important;
   }
@@ -204,7 +189,7 @@
   .mynameis {
     padding-top: 5vh !important;
     padding-bottom: 5vh !important;
-    max-width: 80vw;
+    // max-width: 80vw;
     line-height: 5.6rem !important;
     letter-spacing: -1.3rem !important;
     // font-size: 13.5vh !important;
@@ -216,7 +201,7 @@
     position: relative;
     right: 18vw;
     img {
-      width: 120vw;
+      width: 80vw;
       height: 100vh;
     }
   }
@@ -235,42 +220,44 @@
 
 @media (max-width: 425px) {
   .main-banner .container-fluid {
-    padding-left: 4vw !important;
-    padding-right: 4vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .whoami {
+    margin-left: 40% !important;
+    width: 110% !important;
+    font-size: 1.3rem !important;
   }
   .mynameis {
     padding-top: 4vh !important;
     padding-bottom: 4vh !important;
-    width: 70vw !important;
-    letter-spacing: -1.3rem !important;
+    // width: 70vw !important;
+    left: 30% !important;
+    width: 180% !important;
+    letter-spacing: -1rem !important;
+    font-size: 7rem !important;
+  }
+
+  .banner-image-wrapper {
+    // height: 100%;
+    // width: 100%;
+    position: relative;
+    // width: 55rem;
+    right: 150%;
+    // background-color: #101b3b;
+    img {
+      width: 160vh;
+      height: 100vh;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .mynameis {
     font-size: 6rem !important;
   }
-}
 
-@media (max-width: 374px) {
-  .main-banner .container-fluid {
-    padding-left: 4vw !important;
-    padding-right: 4vw !important;
-  }
-  .mynameis {
-    width: 80vw !important;
-    padding-top: 0 !important;
-    letter-spacing: -1.3rem !important;
-    font-size: 5rem !important;
+  .banner-image-wrapper {
+    right: 180%;
   }
 }
-
-// .kenburns-bottom-right {
-//   animation: kenburns-bottom-right 3s ease-out both;
-// }
-
-// @keyframes kenburns-bottom-right {
-//   0% {
-//     transform: scale(1) translate(0, 0);
-//     transform-origin: 84% 84%;
-//   }
-//   100% {
-//     transform: scale(1.25) translate(10px, 8px);
-//     transform-origin: right bottom;
-//   }
-// }

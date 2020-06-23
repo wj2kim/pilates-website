@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from './pages/Navigation';
 import PageHeader from './pages/PageHeader';
 import PageBody from './pages/PageBody';
 import PageFooter from './pages/PageFooter';
@@ -10,9 +9,6 @@ function App() {
     <div className="App">
       <div id="canvas-wrapper">
         <div id="canvas">
-          {/* <div id="navigation-wrapper">
-            <Navigation />
-          </div> */}
           <div id="page-header-wrapper">
             <PageHeader />
           </div>

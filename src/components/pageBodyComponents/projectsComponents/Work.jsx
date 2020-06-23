@@ -16,11 +16,7 @@ const Work = ({ project, openModal }) => {
           <p className="title">{title}</p>
           <div className="overlay"></div>
           <div className="button">
-            <a
-              href="#modal-detail"
-              // className="modal-trigger"
-              onClick={() => openModal(project)}
-            >
+            <a href="#modal-detail" onClick={() => openModal(project)}>
               DETAIL
             </a>
           </div>

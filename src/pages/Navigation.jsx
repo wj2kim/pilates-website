@@ -8,8 +8,14 @@ const Navigation = () => {
   };
 
   document.addEventListener('DOMContentLoaded', function () {
-    const elems = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elems, navOptions);
+    const elems = document.querySelector('.sidenav');
+    const sideNavInstance = M.Sidenav.init(elems, navOptions);
+    const menus = elems.childNodes;
+    menus.forEach((menu) => {
+      menu.addEventListener('click', () => {
+        sideNavInstance.close();
+      });
+    });
   });
 
   return (
@@ -32,34 +38,22 @@ const Navigation = () => {
             </a>
             <ul className="right hide-on-med-and-down">
               <li>
-                <a
-                  className="black-text waves-effect waves-brown"
-                  href="#content-about"
-                >
+                <a className="black-text" href="#content-about">
                   About
                 </a>
               </li>
               <li>
-                <a
-                  className="black-text waves-effect waves-brown"
-                  href="#content-portfolio"
-                >
+                <a className="black-text" href="#content-portfolio">
                   Projects
                 </a>
               </li>
               <li>
-                <a
-                  className="black-text waves-effect waves-brown"
-                  href="#content-blog"
-                >
+                <a className="black-text" href="#content-blog">
                   Blogs
                 </a>
               </li>
               <li>
-                <a
-                  className="black-text waves-effect waves-brown"
-                  href="#content-contact"
-                >
+                <a className="black-text" href="#content-contact">
                   Contact
                 </a>
               </li>
@@ -69,16 +63,29 @@ const Navigation = () => {
       </div>
       <ul className="sidenav" id="mobile-responsive">
         <li>
-          <a href="#content-about">About</a>
+          <a className="sidenav-menu" href="#main-banner">
+            Home
+          </a>
         </li>
         <li>
-          <a href="#content-portfolio">Portfolio</a>
+          <a className="sidenav-menu" href="#content-about">
+            About
+          </a>
         </li>
         <li>
-          <a href="#content-blog">Blog</a>
+          <a className="sidenav-menu" href="#content-portfolio">
+            Projects
+          </a>
         </li>
         <li>
-          <a href="#content-contact">Contact</a>
+          <a className="sidenav-menu" href="#content-blog">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a className="sidenav-menu" href="#content-contact">
+            Contact
+          </a>
         </li>
       </ul>
     </div>

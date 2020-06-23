@@ -1,13 +1,10 @@
-#content-about-body {
-  // box-shadow: 6.5rem 2.5rem 5rem 0.7rem rgba(0, 0, 0, 0.13);
-}
-
 #image-stack {
-  padding-top: 4%;
-  padding-bottom: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 #content-about {
+  min-height: 100vh;
   font: bold 14px/1.4 'Open Sans', arial, sans-serif;
   letter-spacing: 0.15em;
   #content-about-title {
@@ -20,6 +17,9 @@
   }
 }
 
+.about-me .header {
+  // height: 35rem%;
+}
 .about-me .about-content {
   font: bold 14px/1.4 'LibreBaskerville-Regular', 'Palatino Linotype',
     'Times New Roman', serif;
@@ -86,6 +86,7 @@
 }
 
 .about-content.back-image {
+  height: 80%;
   position: relative;
   z-index: -2;
 }
@@ -120,8 +121,11 @@
 }
 
 @media screen and (min-width: 1441px) {
+  .row.about-me {
+    padding: 5rem;
+  }
   #content-about-title {
-    font-size: xxx-large !important;
+    font-size: xx-large !important;
   }
   .about-me .about-content {
     .profile-wrapper {
@@ -158,16 +162,23 @@
   }
 }
 @media screen and (max-width: 1440px) {
-  #content-about-title {
-    font-size: x-large !important;
+  // #content-about-title {
+  //   font-size: large !important;
+  // }
+  .row.about-me {
+    // padding: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .about-me .about-content {
     .profile-wrapper {
       .profile-detail {
         .profile-location {
-          font-size: medium;
+          font-size: small;
           i {
-            font-size: medium;
+            font-size: small;
           }
         }
         .profile-name {
@@ -177,7 +188,7 @@
           font-size: medium;
         }
         .profile-summary {
-          font-size: large;
+          font-size: medium;
         }
       }
     }
@@ -188,9 +199,9 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #content-about-title {
-    font-size: large !important;
-  }
+  // #content-about-title {
+  //   // font-size: large !important;
+  // }
   .about-me .about-content {
     .profile-wrapper {
       .profile-detail {
@@ -253,12 +264,15 @@
 }
 
 @media screen and (max-width: 600px) {
+  .row.about-me {
+    padding: 0 !important;
+  }
   #image-stack {
     padding-left: 0;
     padding-right: 0;
   }
   .about-me .about-content {
-    height: 60vh;
+    height: 28rem;
     .profile-wrapper {
       padding: 3%;
       .profile-detail {
@@ -298,8 +312,11 @@
   }
 }
 @media screen and (max-width: 425px) {
+  .about-content.back-image {
+    height: 35vh !important;
+  }
   .about-me .about-content {
-    height: 65vh;
+    height: 28rem;
     .profile-wrapper {
       .profile-detail {
         .profile-location {
@@ -341,7 +358,7 @@
     padding: 2%;
   }
   .about-me .about-content {
-    height: 60vh;
+    height: 26rem;
     .profile-wrapper {
       .profile-detail {
         .profile-location {
@@ -369,11 +386,14 @@
 }
 
 @media screen and (max-width: 325px) {
+  .about-content.back-image {
+    height: 28vh !important;
+  }
   .about-me .about-content .icon-wrapper {
     padding: 2%;
   }
   .about-me .about-content {
-    height: 60vh;
+    height: 25rem;
   }
   .about-content.back-image {
     height: 70%;

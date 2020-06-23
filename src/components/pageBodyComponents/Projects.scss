@@ -1,4 +1,5 @@
 #content-portfolio {
+  min-height: 100vh;
   font: bold 14px/1.4 'Open Sans', arial, sans-serif;
   letter-spacing: 0.15em;
   margin-bottom: 1rem;
@@ -9,5 +10,11 @@
   }
   #content-portfolio-body {
     padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  #content-portfolio-title {
+    font-size: xx-large !important;
   }
 }
