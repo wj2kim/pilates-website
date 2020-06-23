@@ -13,6 +13,7 @@ const Contact = () => {
   const [nameError, setNameError] = useState('');
   const [emailAddressError, setEmailAddressError] = useState('');
   const [messageError, setMessageError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   // to check if form has succesfully submitted
   const [submitted, setSubmitted] = useState(false);
@@ -76,26 +77,31 @@ const Contact = () => {
         message: message,
       };
       sendEmail(request);
+      setName('');
+      setEmail('');
+      setMessage('');
       setSubmitted(true);
     }
   };
 
-  const sendEmail = (request) => {
-    emailjs.send(serviceId, templateId, request, userId).then(
+  const sendEmail = async (request) => {
+    setLoading(true);
+    await emailjs.send(serviceId, templateId, request, userId).then(
       (response) => {
         setSubmitResult({
           ...submitResult,
           success: true,
-          message: 'Thank you! Your message was successfully delivered',
+          message: 'Thank you! Your message was successfully delivered.',
         });
       },
       (error) => {
         setSubmitResult({
           ...submitResult,
-          message: 'Network is unstable. Please try again later',
+          message: 'Network is unstable. Please try again later.',
         });
       },
     );
+    setLoading(false);
   };
 
   return (
@@ -106,8 +112,8 @@ const Contact = () => {
       <div id="content-contact-subtitle">
         Let's work together or have some coffee!
       </div>
-      <div id="content-contact-body" className="contact-body row">
-        <div className="col s12 m6 row">
+      <div id="content-contact-body" className="contact-body row card">
+        <div id="content-main-contact" className="col s12 m6 row">
           <form
             noValidate={true}
             className="col s12 contact-form"
@@ -124,7 +130,7 @@ const Contact = () => {
                   maxLength="30"
                   onChange={onNameChange}
                 />
-                <label for="input-name">
+                <label for="input-name" style={{ fontSize: '12px' }}>
                   Name <span className="required-mark">*</span>
                 </label>
                 <span className="error">{nameError}</span>
@@ -141,7 +147,7 @@ const Contact = () => {
                   maxLength="40"
                   onChange={onEmailChange}
                 />
-                <label for="input-email">
+                <label for="input-email" style={{ fontSize: '12px' }}>
                   Email <span className="required-mark">*</span>
                 </label>
                 <span className="error">{emailAddressError}</span>
@@ -158,25 +164,54 @@ const Contact = () => {
                   maxLength="300"
                   onChange={onMessageChange}
                 />
-                <label for="input-message">
+                <label for="input-message" style={{ fontSize: '12px' }}>
                   Message <span className="required-mark">*</span>
                 </label>
                 <span className="error">{messageError}</span>
               </div>
             </div>
-            <div id="button-area">
-              <button
-                className="btn waves-light"
-                type="submit"
-                name="action"
-                disabled={submitted && submitResult.success}
+            <div id="button-area" className="button-area row">
+              {!loading && (
+                <div className="col s3" style={{ padding: 0 }}>
+                  <button
+                    className="btn waves-light"
+                    type="submit"
+                    name="action"
+                    disabled={submitted && submitResult.success}
+                  >
+                    Send
+                    <i className="material-icons right">send</i>
+                  </button>
+                </div>
+              )}
+              {loading && (
+                <div className="col s12" style={{ paddingLeft: '2.5rem' }}>
+                  <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-cyan-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div>
+                      <div class="gap-patch">
+                        <div class="circle"></div>
+                      </div>
+                      <div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div
+                id="thankyou-message"
+                className="col s9"
+                style={{
+                  padding: 0,
+                  paddingLeft: '2rem',
+                  paddingRight: '1rem',
+                  alignSelf: 'center',
+                }}
               >
-                Send
-                <i className="material-icons right">send</i>
-              </button>
-
-              {submitted && (
-                <div className="row">
+                {submitted && (
                   <span
                     className={
                       submitResult.success ? 'submit-success' : 'submit-failure'
@@ -184,12 +219,14 @@ const Contact = () => {
                   >
                     {submitResult.message}
                   </span>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </form>
         </div>
-        <div id="contact-illustration" className="col s12 m6"></div>
+        <div className="col s12 m6" style={{ padding: 0 }}>
+          <div id="contact-illustration"></div>
+        </div>
       </div>
     </section>
   );

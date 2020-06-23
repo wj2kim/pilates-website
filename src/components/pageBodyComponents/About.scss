@@ -18,7 +18,7 @@
 }
 
 .about-me .header {
-  // height: 35rem%;
+  height: 23rem;
 }
 .about-me .about-content {
   font: bold 14px/1.4 'LibreBaskerville-Regular', 'Palatino Linotype',
@@ -65,12 +65,24 @@
   }
   .icons.row {
     margin-left: 0 !important;
+    margin-bottom: 0;
   }
   .icon-wrapper {
-    // padding-right: 10%;
-    // margin-right: 10%;
-    // padding-left: -20%;
     height: 40%;
+  }
+}
+.icon-wrapper {
+  .icons.row {
+    padding-left: 0 !important;
+    height: 50%;
+    .program-icon.col.s2.non-real {
+      width: 0 !important;
+      height: 100%;
+    }
+    .program-icon.col.s2.real {
+      width: 20% !important;
+      height: 100%;
+    }
   }
 }
 .icon-explain-wrapper {
@@ -86,7 +98,7 @@
 }
 
 .about-content.back-image {
-  height: 80%;
+  height: 22.9rem;
   position: relative;
   z-index: -2;
 }
@@ -106,8 +118,8 @@
 
 .program-icon a.icon svg,
 .program-icon a.icon img {
-  width: 100%;
-  height: 100%;
+  width: 3.5rem;
+  height: 3.5rem;
   filter: url(/public/images/about-icons/filter.svg#grayscale);
   filter: gray;
   -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
@@ -121,6 +133,12 @@
 }
 
 @media screen and (min-width: 1441px) {
+  .about-content.header {
+    height: 40rem !important;
+  }
+  .about-content.back-image {
+    height: 40rem !important;
+  }
   .row.about-me {
     padding: 5rem;
   }
@@ -154,6 +172,7 @@
     right: 30% !important;
   }
   .icon-explain-wrapper {
+    padding: 5%;
     #icon-explain {
       #icon-explain-span {
         font-size: large;
@@ -165,6 +184,7 @@
   // #content-about-title {
   //   font-size: large !important;
   // }
+
   .row.about-me {
     // padding: 4rem;
     padding-top: 2rem;
@@ -176,19 +196,21 @@
     .profile-wrapper {
       .profile-detail {
         .profile-location {
-          font-size: small;
+          font-size: 12px;
           i {
-            font-size: small;
+            font-size: 12px;
           }
         }
         .profile-name {
-          font-size: xx-large;
+          font-size: 28px;
         }
         .profile-title {
-          font-size: medium;
+          font-size: 14px;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
         }
         .profile-summary {
-          font-size: medium;
+          font-size: 14px;
         }
       }
     }
@@ -207,25 +229,25 @@
       .profile-detail {
         padding: 6% !important;
         .profile-location {
-          font-size: 12px;
+          font-size: 11px;
           i {
-            font-size: 12px;
+            font-size: 11px;
           }
         }
         .profile-name {
-          font-size: 28px;
+          font-size: 23px;
         }
         .profile-title {
-          font-size: 13px;
+          font-size: 11px;
         }
         .profile-summary {
-          font-size: 15px;
+          font-size: 12px;
         }
       }
     }
   }
   .icon-explain-wrapper {
-    padding: 0;
+    padding: 5%;
     #icon-explain {
       #icon-explain-span {
         font-size: small;
@@ -250,13 +272,13 @@
           }
         }
         .profile-name {
-          font-size: 22px;
+          font-size: 18px;
         }
         .profile-title {
-          font-size: 12px;
+          font-size: 10px;
         }
         .profile-summary {
-          font-size: 13px;
+          font-size: 11px;
         }
       }
     }
@@ -297,6 +319,7 @@
     .icon-wrapper {
       .icons.row {
         padding-left: 8%;
+        // margin-bottom: 0 !important;
       }
     }
   }
