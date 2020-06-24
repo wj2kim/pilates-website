@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialIcons from '../components/pageFooterComponents/SocialIcons';
-import './PageFooter.scss';
+import './FooterPage.scss';
 
 const PageFooter = () => {
   return (
