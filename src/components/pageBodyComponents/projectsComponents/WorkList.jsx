@@ -32,9 +32,10 @@ const WorkList = () => {
   const initiateSlider = () => {
     const sliderOptions = {
       indicators: false,
-      interval: 6000,
     };
-    setSliderInstance(M.Slider.init(sliderEl.current, sliderOptions));
+    const sliderInsTemp = M.Slider.init(sliderEl.current, sliderOptions);
+    setSliderInstance(sliderInsTemp);
+    sliderInsTemp.pause();
   };
 
   const movePrevSlide = (e) => {
