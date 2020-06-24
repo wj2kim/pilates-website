@@ -225,7 +225,11 @@ const Contact = () => {
           </form>
         </div>
         <div className="col s12 m6" style={{ padding: 0 }}>
-          <div id="contact-illustration"></div>
+          <img
+            id="contact-illustration"
+            src="images/contact/coffeemeeting.svg"
+            alt="coffee-time"
+          />
         </div>
       </div>
     </section>

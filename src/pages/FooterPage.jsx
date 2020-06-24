@@ -18,7 +18,11 @@ const PageFooter = () => {
         </div>
       </div>
       <div className="footer-image-wrapper">
-        <div className="footer-image"></div>
+        <img
+          className="footer-image"
+          src="images/footer/footer-background.png"
+          alt="footer-pic"
+        />
       </div>
     </div>
   );
