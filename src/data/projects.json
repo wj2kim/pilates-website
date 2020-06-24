@@ -39,7 +39,7 @@
     "id": 4,
     "title": "KakaoGateway",
     "subtitle": "Gateway server admin page ",
-    "thumbnailImage": "images/projects/kakaoGateway/kakaoGateway-main.png",
+    "thumbnailImage": "/images/projects/kakaoGateway/kakaoGateway-main.png",
     "image1": "/images/projects/kakaoGateway/kakaoGateway-1.png",
     "image2": "/images/projects/kakaoGateway/kakaoGateway-2.png",
     "image3": "/images/projects/kakaoGateway/kakaoGateway-3.png",

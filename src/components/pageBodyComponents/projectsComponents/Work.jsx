@@ -9,7 +9,7 @@ const Work = ({ project, openModal }) => {
       <div className="card card-image" style={{ margin: 0 }}>
         <div className="card-image work-image">
           <img
-            src={process.env.PUBLIC_URL + thumbnailImage}
+            src={thumbnailImage}
             style={{ objectFit: 'cover' }}
             alt={title + 'image'}
           />

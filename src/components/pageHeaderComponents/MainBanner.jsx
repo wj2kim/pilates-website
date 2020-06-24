@@ -25,10 +25,7 @@ const MainBanner = () => {
             <div className="banner-image-wrapper kenburns-bottom-right">
               <img
                 className="banner-image"
-                src={
-                  process.env.PUBLIC_URL +
-                  +'images/banner/banner-background.png'
-                }
+                src="/images/banner/banner-background.png"
                 alt="banner-background"
               ></img>
             </div>
