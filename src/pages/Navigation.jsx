@@ -26,7 +26,7 @@ const Navigation = () => {
             <a href="/" className="brand-logo left black-text">
               <img
                 id="web-logo"
-                src={'/images/navigation-icons/initialLetter-logo.svg'}
+                src={'images/navigation-icons/initialLetter-logo.svg'}
                 alt="web-logo"
               ></img>
             </a>
