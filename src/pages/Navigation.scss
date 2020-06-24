@@ -5,7 +5,7 @@
 }
 
 #web-logo {
-  background-image: url('/public/images/navigation-icons/initialLetter-logo.svg');
+  background-image: url(process.env.PUBLIC_URL/images/navigation-icons/initialLetter-logo.svg);
   background-size: cover;
 }
 
