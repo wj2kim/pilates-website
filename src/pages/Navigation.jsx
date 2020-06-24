@@ -27,6 +27,7 @@ const Navigation = () => {
               <img
                 id="web-logo"
                 src="images/navigation-icons/initialLetter-logo.svg"
+                alt="web-logo"
               ></img>
             </a>
             <a

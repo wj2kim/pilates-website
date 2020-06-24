@@ -5,8 +5,6 @@ import Blogs from '../components/pageBodyComponents/Blogs';
 import Contact from '../components/pageBodyComponents/Contact';
 
 const PageBody = () => {
-  // const contentDelimeter = <hr />;
-
   return (
     <div id="page-body">
       <div id="content-wrapper">

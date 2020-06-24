@@ -1,10 +1,10 @@
 #content-contact {
-  min-height: 100vh;
+  min-height: 50vh;
 
   font: bold 14px/1.4 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   letter-spacing: 0.15em;
-  margin-bottom: 6rem;
+  margin-bottom: 8rem;
   #content-contact-title {
     padding-top: 5rem !important;
     padding: 10px;
@@ -21,8 +21,6 @@
     background-size: cover;
     width: 100%;
     height: 100%;
-    // background-color: transparent;
-    // background-position: left bottom;
   }
   #content-contact-body {
     margin-top: 3rem;
@@ -198,9 +196,6 @@
   #input-message {
     width: 80%;
   }
-  //   form .error {
-  //     display: flex;
-  //   }
 }
 
 span.required-mark {
@@ -210,5 +205,9 @@ span.required-mark {
 @media screen and (min-width: 1441px) {
   #content-contact-title {
     font-size: xx-large !important;
+  }
+  #content-contact-body {
+    margin-left: 15% !important;
+    margin-right: 15% !important;
   }
 }

@@ -4,7 +4,7 @@
 }
 
 #content-about {
-  min-height: 100vh;
+  min-height: 50vh;
   font: bold 14px/1.4 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   letter-spacing: 0.15em;
@@ -187,12 +187,7 @@
   }
 }
 @media screen and (max-width: 1440px) {
-  // #content-about-title {
-  //   font-size: large !important;
-  // }
-
   .row.about-me {
-    // padding: 4rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 4rem;
@@ -227,9 +222,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  // #content-about-title {
-  //   // font-size: large !important;
-  // }
   .about-me .about-content {
     .profile-wrapper {
       .profile-detail {

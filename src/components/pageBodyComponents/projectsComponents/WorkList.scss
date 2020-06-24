@@ -31,13 +31,10 @@
   .single-work.work {
     height: 16rem !important;
   }
-  .work-list-wrapper {
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .work-list-wrapper {
-    // padding: 12rem !important;
     padding-left: 10% !important;
     padding-right: 10% !important;
   }
@@ -337,10 +334,6 @@
     transform: scale(1.15);
   }
 }
-
-// #modal1 {
-//   height: 100vh;
-// }
 
 .material-icons {
   font-weight: normal;

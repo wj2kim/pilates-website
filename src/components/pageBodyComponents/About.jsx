@@ -156,7 +156,7 @@ const About = () => {
           </div>
           <div className="about-content back-image col s12 m6">
             <img
-              src="images/profile-side-image6.svg"
+              src="images/about/profile-side-image6.svg"
               alt="profile-side-image"
               class="profile-side-image"
             />
