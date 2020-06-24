@@ -111,6 +111,11 @@ const WorkList = () => {
             <div className="pk-modal-slides">
               <div ref={sliderEl} className="slider" id="pk-slider">
                 <div className="carousel-fixed-item center middle-indicator">
+                  {detail && detail.url === '' && (
+                    <div id="not-related-images" className="center">
+                      * These images are not related to the content *
+                    </div>
+                  )}
                   <div className="left">
                     <a
                       href="previous"
@@ -122,7 +127,6 @@ const WorkList = () => {
                       </i>
                     </a>
                   </div>
-
                   <div className="right">
                     <a
                       href="next"
@@ -162,13 +166,21 @@ const WorkList = () => {
             <div className="pk-modal-footer link-quit container-fluid">
               {detail && (
                 <div id="modal-visit-site">
-                  <a href={detail.url} target="_blank" className="cta">
-                    <span>Visit Site</span>
-                    <svg width="13px" height="10px" viewBox="0 0 13 10">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
+                  {detail.url !== '' && (
+                    <a href={detail.url} target="_blank" className="cta">
+                      <span>Visit Site</span>
+                      <svg width="13px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  )}
+                  {detail.url === '' && (
+                    <span id="no-link-reason">
+                      Images are not allowed. <br />
+                      This application is company's property
+                    </span>
+                  )}
                 </div>
               )}
               <div id="modal-quit">

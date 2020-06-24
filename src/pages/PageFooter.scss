@@ -5,7 +5,7 @@
     margin: 0rem 3rem !important;
   }
   .footer {
-    margin: 6rem 1rem 4.5rem 1rem;
+    margin: 3.5rem 1rem 1.5rem 1rem;
   }
   #copyright {
     padding: 15px 0px;
@@ -16,5 +16,12 @@
     i {
       font-size: 11px;
     }
+  }
+  .footer-image {
+    width: 100vw;
+    height: 4.5rem;
+    background-image: url(/images/footer/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

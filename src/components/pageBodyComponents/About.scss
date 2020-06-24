@@ -27,7 +27,7 @@
     'Lucida Sans', Arial, sans-serif;
   width: fit-content;
   padding: 0rem !important;
-  background-color: hsla(0, 0%, 95%, 0.97);
+  background-color: hsla(0, 0%, 98%, 0.98);
   .profile-wrapper {
     height: 60%;
     .profile-detail {
@@ -99,6 +99,10 @@
   }
 }
 
+.textEffect-1 {
+  color: #ee094e;
+}
+
 .about-content.back-image {
   height: 22.9rem;
   position: relative;
@@ -122,7 +126,7 @@
 .program-icon a.icon img {
   width: 3.5rem;
   height: 3.5rem;
-  filter: url(/public/images/about-icons/filter.svg#grayscale);
+  filter: url(/public/images/about/icons/filter.svg#grayscale);
   filter: gray;
   -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
   -webkit-transition: all 0.15s;

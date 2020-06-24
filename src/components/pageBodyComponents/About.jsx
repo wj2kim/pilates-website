@@ -70,9 +70,12 @@ const About = () => {
                 <div className="profile-name">Paul Woo Jung Kim</div>
                 <div className="profile-title">JUNIOR FRONT-END DEVELOPER</div>
                 <div className="profile-summary underline-effect-1">
-                  I love handling interactive web, making smart user interface
-                  and useful interaction. Currently, I am focusing on developing
-                  rich skills on web application and even optimization.
+                  I love handling{' '}
+                  <span className="textEffect-1">interactive web</span>, making
+                  smart user interface and useful interaction. Currently, I am{' '}
+                  <span className="textEffect-1">focusing</span> on developing
+                  rich skills on{' '}
+                  <span className="textEffect-1">web application</span>.
                 </div>
               </div>
             </div>
@@ -81,7 +84,7 @@ const About = () => {
                 <div className="program-icon col s2 real">
                   <a href="javascript:void(0)" className="icon" id="react-icon">
                     <img
-                      src="images/about-icons/react-icon.svg"
+                      src="images/about/icons/react-icon.svg"
                       al="react-icon.svg"
                       style={{ padding: '3px' }}
                     />
@@ -115,7 +118,7 @@ const About = () => {
                     id="responsive-icon"
                   >
                     <img
-                      src="images/about-icons/responsive.svg"
+                      src="images/about/icons/responsive.svg"
                       al="responsive.svg"
                       style={{ marginLeft: '12%' }}
                     />
@@ -124,7 +127,7 @@ const About = () => {
                 <div className="program-icon col s2">
                   <a href="javascript:void(0)" className="icon" id="java-icon">
                     <img
-                      src="images/about-icons/java-icon.svg"
+                      src="images/about/icons/java-icon.svg"
                       al="java-icon.svg"
                       style={{ marginLeft: '8%' }}
                     />
@@ -137,7 +140,7 @@ const About = () => {
                     id="spring-icon"
                   >
                     <img
-                      src="images/about-icons/spring-icon.svg"
+                      src="images/about/icons/spring-icon.svg"
                       al="spring-icon.svg"
                     />
                   </a>

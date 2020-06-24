@@ -107,7 +107,7 @@ const Contact = () => {
   return (
     <section id="content-contact" className="container-fluid">
       <div id="content-contact-title">
-        <a className="link-2">CONTACT</a>
+        <a className="link-2">Contact</a>
       </div>
       <div id="content-contact-subtitle">
         Let's work together or have some coffee!

@@ -17,6 +17,9 @@ const PageFooter = () => {
           </div>
         </div>
       </div>
+      <div className="footer-image-wrapper">
+        <div className="footer-image"></div>
+      </div>
     </div>
   );
 };
