@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <section id="content-blog" className="container-fluid">
       <div id="content-blog-title">
-        <a className="link-2">Blog</a>
+        <div className="link-2">Blog</div>
       </div>
       <div id="content-blog-body" className="container">
         <BlogList />

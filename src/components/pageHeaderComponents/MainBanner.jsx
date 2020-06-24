@@ -26,7 +26,7 @@ const MainBanner = () => {
               <img
                 className="banner-image"
                 src="images/banner/banner-background.png"
-                alt="banner-image"
+                alt="banner-background"
               ></img>
             </div>
           </div>

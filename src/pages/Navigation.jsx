@@ -31,7 +31,7 @@ const Navigation = () => {
               ></img>
             </a>
             <a
-              href="#"
+              href="/#"
               data-target="mobile-responsive"
               className="sidenav-trigger right black-text"
             >

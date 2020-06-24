@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   const validateEmail = (value) => {
-    const error = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    const error = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
       value,
     )
       ? ''
@@ -107,7 +107,7 @@ const Contact = () => {
   return (
     <section id="content-contact" className="container-fluid">
       <div id="content-contact-title">
-        <a className="link-2">Contact</a>
+        <div className="link-2">Contact</div>
       </div>
       <div id="content-contact-subtitle">
         Let's work together or have some coffee!
@@ -130,7 +130,7 @@ const Contact = () => {
                   maxLength="30"
                   onChange={onNameChange}
                 />
-                <label for="input-name" style={{ fontSize: '12px' }}>
+                <label htmlFor="input-name" style={{ fontSize: '12px' }}>
                   Name <span className="required-mark">*</span>
                 </label>
                 <span className="error">{nameError}</span>
@@ -147,7 +147,7 @@ const Contact = () => {
                   maxLength="40"
                   onChange={onEmailChange}
                 />
-                <label for="input-email" style={{ fontSize: '12px' }}>
+                <label htmlFor="input-email" style={{ fontSize: '12px' }}>
                   Email <span className="required-mark">*</span>
                 </label>
                 <span className="error">{emailAddressError}</span>
@@ -164,7 +164,7 @@ const Contact = () => {
                   maxLength="300"
                   onChange={onMessageChange}
                 />
-                <label for="input-message" style={{ fontSize: '12px' }}>
+                <label htmlFor="input-message" style={{ fontSize: '12px' }}>
                   Message <span className="required-mark">*</span>
                 </label>
                 <span className="error">{messageError}</span>
@@ -186,16 +186,16 @@ const Contact = () => {
               )}
               {loading && (
                 <div className="col s12" style={{ paddingLeft: '2.5rem' }}>
-                  <div class="preloader-wrapper small active">
-                    <div class="spinner-layer spinner-cyan-only">
-                      <div class="circle-clipper left">
-                        <div class="circle"></div>
+                  <div className="preloader-wrapper small active">
+                    <div className="spinner-layer spinner-cyan-only">
+                      <div className="circle-clipper left">
+                        <div className="circle"></div>
                       </div>
-                      <div class="gap-patch">
-                        <div class="circle"></div>
+                      <div className="gap-patch">
+                        <div className="circle"></div>
                       </div>
-                      <div class="circle-clipper right">
-                        <div class="circle"></div>
+                      <div className="circle-clipper right">
+                        <div className="circle"></div>
                       </div>
                     </div>
                   </div>

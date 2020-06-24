@@ -17,16 +17,23 @@ const SocialIcons = () => {
         <a
           title="Instagram"
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.instagram.com/pvvjk/"
         >
           <li className="social-name col s6 m4">INSTAGRAM</li>
         </a>
-        <a title="Github" target="_blank" href="https://github.com/wj2kim">
+        <a
+          title="Github"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/wj2kim"
+        >
           <li className="social-name col s6 m4">GITHUB</li>
         </a>
         <a
           title="Tistory"
           target="_blank"
+          rel="noopener noreferrer"
           href="https://dont-stay-hungry.tistory.com"
         >
           <li className="social-name cols s6 m4">TISTORY</li>

@@ -85,9 +85,12 @@ const WorkList = () => {
 
   if (!projects) {
     return (
-      <div class="container" style={{ textAlign: 'center', paddingTop: '18%' }}>
+      <div
+        className="container"
+        style={{ textAlign: 'center', paddingTop: '18%' }}
+      >
         <div>
-          <i class="material-icons">announcement</i>
+          <i className="material-icons">announcement</i>
         </div>
         <div>No Projects Available</div>
       </div>
@@ -105,7 +108,7 @@ const WorkList = () => {
         ))}
       </div>
 
-      <div id="modal1" class="modal pk-modal-frame">
+      <div id="modal1" className="modal pk-modal-frame">
         <div className="pk-modal-body">
           <div className="pk-modal-inner">
             <div className="pk-modal-slides">
@@ -117,40 +120,38 @@ const WorkList = () => {
                     </div>
                   )}
                   <div className="left">
-                    <a
-                      href="previous"
+                    <div
                       onClick={movePrevSlide}
                       className="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"
                     >
                       <i className="material-icons left  middle-indicator-text">
                         chevron_left
                       </i>
-                    </a>
+                    </div>
                   </div>
                   <div className="right">
-                    <a
-                      href="next"
+                    <div
                       onClick={moveNextSlide}
                       className=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"
                     >
                       <i className="material-icons right middle-indicator-text">
                         chevron_right
                       </i>
-                    </a>
+                    </div>
                   </div>
                 </div>
                 <ul className="slides">
                   <li>
-                    <img class="projectImage" src="" alt="" />
+                    <img className="projectImage" src="" alt="" />
                   </li>
                   <li>
-                    <img class="projectImage" src="" alt="" />
+                    <img className="projectImage" src="" alt="" />
                   </li>
                   <li>
-                    <img class="projectImage" src="" alt="" />
+                    <img className="projectImage" src="" alt="" />
                   </li>
                   <li>
-                    <img class="projectImage" src="" alt="" />
+                    <img className="projectImage" src="" alt="" />
                   </li>
                 </ul>
               </div>
@@ -167,7 +168,12 @@ const WorkList = () => {
               {detail && (
                 <div id="modal-visit-site">
                   {detail.url !== '' && (
-                    <a href={detail.url} target="_blank" className="cta">
+                    <a
+                      href={detail.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cta"
+                    >
                       <span>Visit Site</span>
                       <svg width="13px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
@@ -184,9 +190,9 @@ const WorkList = () => {
                 </div>
               )}
               <div id="modal-quit">
-                <a className="modal-close waves-effect btn-flat">
+                <div className="modal-close waves-effect btn-flat">
                   <i className="material-icons center">close</i>
-                </a>
+                </div>
               </div>
             </div>
           </div>

@@ -6,9 +6,7 @@ const Projects = () => {
   return (
     <section id="content-portfolio" className="container-fluid">
       <div id="content-portfolio-title">
-        <a herf="#" className="link-2">
-          Projects
-        </a>
+        <div className="link-2">Projects</div>
       </div>
       <div id="content-portfolio-body">
         <WorkList />

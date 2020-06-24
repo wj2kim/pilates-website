@@ -45,16 +45,16 @@ const BlogList = () => {
 
   if (loading) {
     return (
-      <div class="preloader-wrapper small active" style={{ margin: '50%' }}>
-        <div class="spinner-layer spinner-red-only">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
+      <div className="preloader-wrapper small active" style={{ margin: '50%' }}>
+        <div className="spinner-layer spinner-red-only">
+          <div className="circle-clipper left">
+            <div className="circle"></div>
           </div>
-          <div class="gap-patch">
-            <div class="circle"></div>
+          <div className="gap-patch">
+            <div className="circle"></div>
           </div>
-          <div class="circle-clipper right">
-            <div class="circle"></div>
+          <div className="circle-clipper right">
+            <div className="circle"></div>
           </div>
         </div>
       </div>
@@ -63,9 +63,12 @@ const BlogList = () => {
 
   if (!posts) {
     return (
-      <div class="container" style={{ textAlign: 'center', paddingTop: '18%' }}>
+      <div
+        className="container"
+        style={{ textAlign: 'center', paddingTop: '18%' }}
+      >
         <div>
-          <i class="material-icons">announcement</i>
+          <i className="material-icons">announcement</i>
         </div>
         <div>No posts Available</div>
       </div>
