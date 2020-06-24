@@ -1,7 +1,7 @@
 import React from 'react';
-import PageHeader from './pages/PageHeader';
-import PageBody from './pages/PageBody';
-import PageFooter from './pages/PageFooter';
+import PageHeader from './pages/HeaderPage';
+import PageBody from './pages/BodyPage';
+import PageFooter from './pages/FooterPage';
 import './App.scss';
 
 function App() {
