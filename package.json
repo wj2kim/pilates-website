@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "emailjs-com": "^2.4.1",
-    "gh-pages": "^3.1.0",
     "materialize-css": "^1.0.0-rc.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -20,9 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
