@@ -41,7 +41,7 @@
     padding-top: 4rem;
     margin-bottom: 1rem;
     // color: #101b3b;
-    font-family: fantasy;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   .mynameis {
     font-family: serif;
@@ -98,10 +98,11 @@
 }
 @media (min-width: 1600px) {
   .whoami {
-    font-size: 1.3rem !important;
+    font-size: 1.4rem !important;
   }
   .mynameis {
-    font-size: 13rem !important;
+    font-size: 14rem !important;
+    padding-bottom: 5rem;
   }
 }
 
@@ -110,7 +111,7 @@
     max-width: 1140px;
   }
   .whoami {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     margin-bottom: 3rem !important;
     padding-left: 5rem !important;
     padding-right: 5rem !important;
@@ -175,14 +176,8 @@
   }
   .mynameis {
     padding-top: 5vh !important;
-    // padding-bottom: 10vh !important;
-    width: 120% !important;
+    width: 130% !important;
     left: 25% !important;
-    // max-width: 80vw;
-    // left: 30% !important;
-    // line-height: 6rem !important;
-    // letter-spacing: -0.2rem !important;
-    // font-size: 13.5vh !important;
     font-size: 7.5rem !important;
   }
 }
@@ -198,7 +193,7 @@
     padding-top: 5vh !important;
     padding-bottom: 5vh !important;
     // max-width: 80vw;
-    line-height: 5.6rem !important;
+    line-height: 4rem !important;
     letter-spacing: -1.3rem !important;
     // font-size: 13.5vh !important;
     font-size: 7.5rem !important;
@@ -234,7 +229,7 @@
   .whoami {
     margin-left: 40% !important;
     width: 110% !important;
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
     margin-top: 7rem !important;
     margin-bottom: 2rem !important;
   }
@@ -242,7 +237,7 @@
     padding-top: 4vh !important;
     padding-bottom: 4vh !important;
     // width: 70vw !important;
-    left: 30% !important;
+    // left: 30% !important;
     width: 180% !important;
     letter-spacing: -1rem !important;
     font-size: 7rem !important;
