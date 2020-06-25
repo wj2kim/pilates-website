@@ -4,7 +4,7 @@ import './Projects.scss';
 
 const Projects = () => {
   return (
-    <section id="content-portfolio" className="container-fluid">
+    <section id="content-portfolio">
       <div id="content-portfolio-title">
         <div className="link-2">Projects</div>
       </div>

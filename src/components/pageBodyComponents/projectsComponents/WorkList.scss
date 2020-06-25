@@ -35,14 +35,14 @@
 
 @media screen and (min-width: 1200px) {
   .work-list-wrapper {
-    padding-left: 10% !important;
-    padding-right: 10% !important;
+    padding-left: 15% !important;
+    padding-right: 15% !important;
   }
 }
 @media screen and (max-width: 1199px) {
   .work-list-wrapper {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
   }
 }
 
@@ -52,8 +52,8 @@
   }
   .work-list-wrapper {
     margin: 0px !important;
-    padding-left: 8% !important;
-    padding-right: 8% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
   .pk-modal-content {
     padding-left: 4rem !important;
@@ -172,9 +172,10 @@
 @media screen and (max-width: 425px) {
   #content-blog,
   #content-contact,
-  #content-about {
-    padding-left: 0px;
-    padding-right: 0px;
+  #content-about,
+  #content-portfolio {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     #content-blog-body {
       width: 100%;
       padding-left: 0;
@@ -187,14 +188,14 @@
         .card-title,
         .card-date,
         .card-body {
-          padding-left: 4% !important;
-          padding-right: 4% !important;
+          padding-left: 2rem !important;
+          padding-right: 2rem !important;
         }
       }
     }
   }
   .single-work.work {
-    height: 20rem !important;
+    height: 16.5rem !important;
   }
   .work-list-wrapper {
     margin: 0px !important;
@@ -204,8 +205,6 @@
     padding: 2.5rem 0px !important;
   }
   #content-portfolio {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
     .work-list-wrapper {
       padding: 0px !important;
     }

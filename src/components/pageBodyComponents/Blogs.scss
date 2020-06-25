@@ -15,4 +15,32 @@
   #content-blog-title {
     font-size: xx-large !important;
   }
+  #content-blog-body {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #content-blog-body {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #content-blog-body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  #content-blog-body {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

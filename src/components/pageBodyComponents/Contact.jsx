@@ -180,7 +180,9 @@ const Contact = () => {
                     disabled={submitted && submitResult.success}
                   >
                     Send
-                    <i className="material-icons right">send</i>
+                    <i id="btn-tobehidden" className="material-icons right">
+                      send
+                    </i>
                   </button>
                 </div>
               )}
@@ -224,7 +226,11 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="col s12 m6" style={{ padding: 0 }}>
+        <div
+          id="contact-illust-wrapper"
+          className="col s12 m6"
+          style={{ padding: 0 }}
+        >
           <img
             id="contact-illustration"
             src="images/contact/coffeemeeting.svg"

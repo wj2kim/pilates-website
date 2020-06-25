@@ -54,7 +54,7 @@ const About = () => {
   }, [iconList, iconsExplain]);
 
   return (
-    <section id="content-about" className="container-fluid">
+    <section id="content-about">
       <div id="content-about-title">
         <div className="link-2">About Me</div>
       </div>

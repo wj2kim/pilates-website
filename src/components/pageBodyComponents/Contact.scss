@@ -15,12 +15,16 @@
     margin-left: 1.5rem;
     font-size: larger;
   }
+  #contact-illust-wrapper {
+    text-align: center;
+    align-self: center;
+  }
   #contact-illustration {
     // background-image: url('/public/');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
   #content-contact-body {
     margin-top: 3rem;
@@ -150,6 +154,9 @@
     padding-left: 1.5rem !important;
     text-align: center;
   }
+  #contact-illustration {
+    width: 90% !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -182,6 +189,9 @@
 }
 @media screen and (max-width: 600px) {
   #contact-illustration {
+    display: none;
+  }
+  #btn-tobehidden {
     visibility: hidden;
   }
 }

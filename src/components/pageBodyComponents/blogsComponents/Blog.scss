@@ -41,6 +41,11 @@
     height: 25rem;
   }
 }
+@media screen and (max-width: 1440px) {
+  .single-post .card .card-image {
+    height: 14rem;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .single-post .card .card-image {

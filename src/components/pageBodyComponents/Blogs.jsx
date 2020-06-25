@@ -8,7 +8,7 @@ const Blogs = () => {
       <div id="content-blog-title">
         <div className="link-2">Blog</div>
       </div>
-      <div id="content-blog-body" className="container">
+      <div id="content-blog-body">
         <BlogList />
       </div>
     </section>
