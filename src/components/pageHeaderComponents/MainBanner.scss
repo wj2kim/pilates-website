@@ -98,11 +98,17 @@
 }
 @media (min-width: 1600px) {
   .whoami {
-    font-size: 1.4rem !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 3rem !important;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
   }
   .mynameis {
-    font-size: 14rem !important;
-    padding-bottom: 5rem;
+    padding-top: 6vh !important;
+    letter-spacing: -0.8rem !important;
+    line-height: 5rem !important;
+    font-size: 8.5rem !important;
+    // padding-bottom: 5rem;
   }
 }
 

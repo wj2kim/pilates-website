@@ -141,83 +141,79 @@
   -webkit-filter: grayscale(0) contrast(160%) brightness(103%);
 }
 
-@media screen and (min-width: 1441px) {
+// @media screen and (min-width: 1441px) {
+//   // .about-content.header {
+//   //   height: 40rem !important;
+//   // }
+//   // .about-content.back-image {
+//   //   height: 40rem !important;
+//   // }
+//   .row.about-me {
+//     padding: 5rem;
+//   }
+//   #content-about-title {
+//     font-size: xx-large !important;
+//   }
+//   .about-me .about-content {
+//     .profile-wrapper {
+//       .profile-detail {
+//         padding-left: 8%;
+//         padding-right: 8%;
+//         .profile-location {
+//           font-size: x-large;
+//           i {
+//             font-size: larger;
+//           }
+//         }
+//         .profile-name {
+//           font-size: xxx-large;
+//         }
+//         .profile-title {
+//           font-size: x-large;
+//         }
+//         .profile-summary {
+//           font-size: xx-large;
+//         }
+//       }
+//     }
+//   }
+//   .about-content.back-image {
+//     right: 30% !important;
+//   }
+//   .icon-explain-wrapper {
+//     padding: 4%;
+//     #icon-explain {
+//       #icon-explain-span {
+//         font-size: large;
+//       }
+//     }
+//   }
+// }
+
+@media screen and (min-width: 1025px) {
   .about-content.header {
-    height: 40rem !important;
+    width: 27rem !important;
   }
   .about-content.back-image {
-    height: 40rem !important;
-  }
-  .row.about-me {
-    padding: 5rem;
-  }
-  #content-about-title {
-    font-size: xx-large !important;
-  }
-  .about-me .about-content {
-    .profile-wrapper {
-      .profile-detail {
-        padding-left: 8%;
-        padding-right: 8%;
-        .profile-location {
-          font-size: x-large;
-          i {
-            font-size: larger;
-          }
-        }
-        .profile-name {
-          font-size: xxx-large;
-        }
-        .profile-title {
-          font-size: x-large;
-        }
-        .profile-summary {
-          font-size: xx-large;
-        }
-      }
-    }
+    width: 27rem !important;
   }
   .about-content.back-image {
-    right: 30% !important;
+    right: 18rem !important;
   }
-  .icon-explain-wrapper {
-    padding: 4%;
-    #icon-explain {
-      #icon-explain-span {
-        font-size: large;
-      }
-    }
-  }
-}
-@media screen and (max-width: 1440px) {
   .row.about-me {
+    width: 67rem !important;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  .about-me .about-content {
-    .profile-wrapper {
-      .profile-detail {
-        .profile-location {
-          font-size: 12px;
-          i {
-            font-size: 12px;
-          }
-        }
-        .profile-name {
-          font-size: 28px;
-        }
-        .profile-title {
-          font-size: 14px;
-          margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
-        }
-        .profile-summary {
-          font-size: 14px;
-        }
-      }
-    }
+}
+@media screen and (max-width: 1024px) {
+  .row.about-me {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .about-content.back-image {
     right: 30% !important;
