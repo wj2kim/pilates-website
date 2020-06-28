@@ -1,19 +1,9 @@
 import React from 'react';
 import './SocialIcons.scss';
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const socialNames = document.querySelectorAll('.social-name');
-//   socialNames.forEach((name) => {
-//     name.addEventListener('mouseover', (e) => {
-//       e.target.
-//     });
-//   });
-// });
-
 const SocialIcons = () => {
   return (
     <div id="social-icons" className="social-icons nav-wrapper row">
-      {/* <ul className="row"> */}
       <a
         title="Instagram"
         target="_blank"

@@ -22,24 +22,24 @@ const BlogList = () => {
   useEffect(() => {
     if (blogList.current) {
       const posts = blogList.current.childNodes;
-      posts.forEach((post, idx) => {
-        post.addEventListener('mouseenter', (e) => {
+      for (let i = 0; i < posts.length; i++) {
+        posts[i].addEventListener('mouseenter', (e) => {
           e.target.classList.toggle('active');
-          for (let i = 0; i < posts.length; i++) {
-            if (i !== idx) {
-              posts[i].classList.toggle('disactive');
+          for (let j = 0; j < posts.length; j++) {
+            if (i !== j) {
+              posts[j].classList.toggle('disactive');
             }
           }
         });
-        post.addEventListener('mouseleave', (e) => {
+        posts[i].addEventListener('mouseleave', (e) => {
           e.target.classList.remove('active');
-          for (let i = 0; i < posts.length; i++) {
-            if (i !== idx) {
-              posts[i].classList.remove('disactive');
+          for (let j = 0; j < posts.length; j++) {
+            if (i !== j) {
+              posts[j].classList.remove('disactive');
             }
           }
         });
-      });
+      }
     }
   });
 

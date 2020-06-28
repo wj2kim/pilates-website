@@ -23,8 +23,8 @@ const About = () => {
 
   useEffect(() => {
     if (iconList) {
-      iconList.forEach((icon, idx) => {
-        icon.addEventListener('mouseenter', (e) => {
+      for (let i = 0; i < iconList.length; i++) {
+        iconList[i].addEventListener('mouseenter', (e) => {
           switch (e.target.firstChild.getAttribute('id')) {
             case 'react-icon':
               setExplanation(iconsExplain.react);
@@ -46,10 +46,37 @@ const About = () => {
               break;
           }
         });
-        icon.addEventListener('mouseleave', () => {
+        iconList[i].addEventListener('mouseleave', () => {
           setExplanation('');
         });
-      });
+      }
+      // iconList.map((icon) => {
+      //   icon.addEventListener('mouseenter', (e) => {
+      //     switch (e.target.firstChild.getAttribute('id')) {
+      //       case 'react-icon':
+      //         setExplanation(iconsExplain.react);
+      //         break;
+      //       case 'javascript-icon':
+      //         setExplanation(iconsExplain.javascript);
+      //         break;
+      //       case 'responsive-icon':
+      //         setExplanation(iconsExplain.responsive);
+      //         break;
+      //       case 'java-icon':
+      //         setExplanation(iconsExplain.java);
+      //         break;
+      //       case 'spring-icon':
+      //         setExplanation(iconsExplain.spring);
+      //         break;
+      //       default:
+      //         setExplanation('');
+      //         break;
+      //     }
+      //   });
+      //   icon.addEventListener('mouseleave', () => {
+      //     setExplanation('');
+      //   });
+      // });
     }
   }, [iconList, iconsExplain]);
 

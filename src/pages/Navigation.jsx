@@ -11,11 +11,11 @@ const Navigation = () => {
     const elems = document.querySelector('.sidenav');
     const sideNavInstance = M.Sidenav.init(elems, navOptions);
     const menus = elems.childNodes;
-    menus.forEach((menu) => {
-      menu.addEventListener('click', () => {
+    for (let i = 0; i < menus.length; i++) {
+      menus[i].addEventListener('click', () => {
         sideNavInstance.close();
       });
-    });
+    }
   });
 
   return (
