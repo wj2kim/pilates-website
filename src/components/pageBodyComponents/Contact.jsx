@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.scss';
+import Fade from 'react-reveal/Fade';
 
 const Contact = () => {
   const serviceId = 'gmail';
@@ -109,135 +110,139 @@ const Contact = () => {
       <div id="content-contact-title">
         <div className="link-2">Contact</div>
       </div>
-      <div id="content-contact-subtitle">
-        Let's work together or have some coffee!
-      </div>
-      <div id="content-contact-body" className="contact-body row card">
-        <div id="content-main-contact" className="col s12 m6 row">
-          <form
-            noValidate={true}
-            className="col s12 contact-form"
-            onSubmit={setEmailBeforeSending}
-          >
-            <div className="row">
-              <div className="input-field col s12">
-                <i className="material-icons prefix">account_circle</i>
-                <input
-                  id="input-name"
-                  type="text"
-                  className="validate"
-                  value={name}
-                  maxLength="30"
-                  onChange={onNameChange}
-                />
-                <label htmlFor="input-name" style={{ fontSize: '12px' }}>
-                  Name <span className="required-mark">*</span>
-                </label>
-                <span className="error">{nameError}</span>
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-field col s12">
-                <i className="material-icons prefix">email</i>
-                <input
-                  id="input-email"
-                  type="email"
-                  className="validate"
-                  value={email}
-                  maxLength="40"
-                  onChange={onEmailChange}
-                />
-                <label htmlFor="input-email" style={{ fontSize: '12px' }}>
-                  Email <span className="required-mark">*</span>
-                </label>
-                <span className="error">{emailAddressError}</span>
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-field col s12">
-                <i className="material-icons prefix">mode_edit</i>
-                <input
-                  id="input-message"
-                  type="text"
-                  className="validate"
-                  value={message}
-                  maxLength="300"
-                  onChange={onMessageChange}
-                />
-                <label htmlFor="input-message" style={{ fontSize: '12px' }}>
-                  Message <span className="required-mark">*</span>
-                </label>
-                <span className="error">{messageError}</span>
-              </div>
-            </div>
-            <div id="button-area" className="button-area row">
-              {!loading && (
-                <div className="col s3" style={{ padding: 0 }}>
-                  <button
-                    className="btn waves-light"
-                    type="submit"
-                    name="action"
-                    disabled={submitted && submitResult.success}
-                  >
-                    Send
-                    <i id="btn-tobehidden" className="material-icons right">
-                      send
-                    </i>
-                  </button>
+      <Fade left cascade>
+        <div id="content-contact-subtitle">
+          Let's work together or have some coffee!
+        </div>
+        <div id="content-contact-body" className="contact-body row card">
+          <div id="content-main-contact" className="col s12 m6 row">
+            <form
+              noValidate={true}
+              className="col s12 contact-form"
+              onSubmit={setEmailBeforeSending}
+            >
+              <div className="row">
+                <div className="input-field col s12">
+                  <i className="material-icons prefix">account_circle</i>
+                  <input
+                    id="input-name"
+                    type="text"
+                    className="validate"
+                    value={name}
+                    maxLength="30"
+                    onChange={onNameChange}
+                  />
+                  <label htmlFor="input-name" style={{ fontSize: '12px' }}>
+                    Name <span className="required-mark">*</span>
+                  </label>
+                  <span className="error">{nameError}</span>
                 </div>
-              )}
-              {loading && (
-                <div className="col s12" style={{ paddingLeft: '2.5rem' }}>
-                  <div className="preloader-wrapper small active">
-                    <div className="spinner-layer spinner-cyan-only">
-                      <div className="circle-clipper left">
-                        <div className="circle"></div>
-                      </div>
-                      <div className="gap-patch">
-                        <div className="circle"></div>
-                      </div>
-                      <div className="circle-clipper right">
-                        <div className="circle"></div>
+              </div>
+              <div className="row">
+                <div className="input-field col s12">
+                  <i className="material-icons prefix">email</i>
+                  <input
+                    id="input-email"
+                    type="email"
+                    className="validate"
+                    value={email}
+                    maxLength="40"
+                    onChange={onEmailChange}
+                  />
+                  <label htmlFor="input-email" style={{ fontSize: '12px' }}>
+                    Email <span className="required-mark">*</span>
+                  </label>
+                  <span className="error">{emailAddressError}</span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="input-field col s12">
+                  <i className="material-icons prefix">mode_edit</i>
+                  <input
+                    id="input-message"
+                    type="text"
+                    className="validate"
+                    value={message}
+                    maxLength="300"
+                    onChange={onMessageChange}
+                  />
+                  <label htmlFor="input-message" style={{ fontSize: '12px' }}>
+                    Message <span className="required-mark">*</span>
+                  </label>
+                  <span className="error">{messageError}</span>
+                </div>
+              </div>
+              <div id="button-area" className="button-area row">
+                {!loading && (
+                  <div className="col s3" style={{ padding: 0 }}>
+                    <button
+                      className="btn waves-light"
+                      type="submit"
+                      name="action"
+                      disabled={submitted && submitResult.success}
+                    >
+                      Send
+                      <i id="btn-tobehidden" className="material-icons right">
+                        send
+                      </i>
+                    </button>
+                  </div>
+                )}
+                {loading && (
+                  <div className="col s12" style={{ paddingLeft: '2.5rem' }}>
+                    <div className="preloader-wrapper small active">
+                      <div className="spinner-layer spinner-cyan-only">
+                        <div className="circle-clipper left">
+                          <div className="circle"></div>
+                        </div>
+                        <div className="gap-patch">
+                          <div className="circle"></div>
+                        </div>
+                        <div className="circle-clipper right">
+                          <div className="circle"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
-              <div
-                id="thankyou-message"
-                className="col s9"
-                style={{
-                  padding: 0,
-                  paddingLeft: '2rem',
-                  paddingRight: '1rem',
-                  alignSelf: 'center',
-                }}
-              >
-                {submitted && (
-                  <span
-                    className={
-                      submitResult.success ? 'submit-success' : 'submit-failure'
-                    }
-                  >
-                    {submitResult.message}
-                  </span>
                 )}
+                <div
+                  id="thankyou-message"
+                  className="col s9"
+                  style={{
+                    padding: 0,
+                    paddingLeft: '2rem',
+                    paddingRight: '1rem',
+                    alignSelf: 'center',
+                  }}
+                >
+                  {submitted && (
+                    <span
+                      className={
+                        submitResult.success
+                          ? 'submit-success'
+                          : 'submit-failure'
+                      }
+                    >
+                      {submitResult.message}
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+          <div
+            id="contact-illust-wrapper"
+            className="col s12 m6"
+            style={{ padding: 0 }}
+          >
+            <img
+              id="contact-illustration"
+              src="images/contact/coffeemeeting.svg"
+              alt="coffee-time"
+            />
+          </div>
         </div>
-        <div
-          id="contact-illust-wrapper"
-          className="col s12 m6"
-          style={{ padding: 0 }}
-        >
-          <img
-            id="contact-illustration"
-            src="images/contact/coffeemeeting.svg"
-            alt="coffee-time"
-          />
-        </div>
-      </div>
+      </Fade>
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import WorkList from './projectsComponents/WorkList';
 import './Projects.scss';
+import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
   return (
@@ -8,9 +9,11 @@ const Projects = () => {
       <div id="content-portfolio-title">
         <div className="link-2">Projects</div>
       </div>
-      <div id="content-portfolio-body">
-        <WorkList />
-      </div>
+      <Fade left>
+        <div id="content-portfolio-body">
+          <WorkList />
+        </div>
+      </Fade>
     </section>
   );
 };
