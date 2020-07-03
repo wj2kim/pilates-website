@@ -24,9 +24,16 @@ const WorkList = () => {
         modalInstance.close();
         setSliderInstance(null);
         setDetail(null);
+        setNavStyle(997);
       },
     });
     modalInstance.open();
+  };
+
+  const setNavStyle = (param) => {
+    document
+      .querySelector('#sticky-top-menu')
+      .setAttribute('style', `z-index:${param}`);
   };
 
   const initiateSlider = () => {
@@ -55,6 +62,7 @@ const WorkList = () => {
     initiateSlider();
     setDetail(project);
     setImages(project);
+    setNavStyle(0);
   };
 
   const setImages = ({ image1, image2, image3, image4 }) => {

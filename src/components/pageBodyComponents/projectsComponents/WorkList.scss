@@ -149,6 +149,7 @@
 }
 @media screen and (max-width: 600px) {
   .pk-modal-frame {
+    max-height: 100% !important;
     width: 100% !important;
   }
   #not-related-images {
