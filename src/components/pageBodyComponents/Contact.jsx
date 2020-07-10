@@ -110,12 +110,14 @@ const Contact = () => {
       <div id="content-contact-title">
         <div className="link-2">Contact</div>
       </div>
-      <Fade left cascade>
+      <Fade left>
         <div id="content-contact-subtitle">
           Let's work together or have some coffee!
         </div>
-        <div id="content-contact-body" className="contact-body row card">
-          <div id="content-main-contact" className="col s12 m6 row">
+      </Fade>
+      <div id="content-contact-body" className="contact-body row card">
+        <div id="content-main-contact" className="col s12 m6 row">
+          <Fade left cascade>
             <form
               noValidate={true}
               className="col s12 contact-form"
@@ -229,20 +231,20 @@ const Contact = () => {
                 </div>
               </div>
             </form>
-          </div>
-          <div
-            id="contact-illust-wrapper"
-            className="col s12 m6"
-            style={{ padding: 0 }}
-          >
-            <img
-              id="contact-illustration"
-              src="images/contact/coffeemeeting.svg"
-              alt="coffee-time"
-            />
-          </div>
+          </Fade>
         </div>
-      </Fade>
+        <div
+          id="contact-illust-wrapper"
+          className="col s12 m6"
+          style={{ padding: 0 }}
+        >
+          <img
+            id="contact-illustration"
+            src="images/contact/coffeemeeting.svg"
+            alt="coffee-time"
+          />
+        </div>
+      </div>
     </section>
   );
 };
